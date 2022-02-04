@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX4</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <label for="name">Nome:</label>
+            <input type="text" id="name">
+
+            <label for="subname">Sobrenome</label>
+            <input type="text" id="subName">
+        </fieldset>
+        <fieldset>
+            Endereço: <br>
+            <input type="text">
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Dados Proficionais</legend> 
+
+            <label for="select">Escolaridade</label>
+        <select name="select" id="select">
+            <option value="EFI" selected>Selecione o grau de ensino</option>
+            <option value="EFI">Ensino Fundamental incompleto</option>
+            <option value="EFC">Ensino Fundamental completo</option>
+            <option value="EMI">Ensino Médio incompleto</option>
+            <option value="EMC">Ensino Médio completo</option>
+        </select>
+        <br>
+
+        Trabalha atualmente?
+        <input type="radio" id="y">
+        <label for="y">Sim</label>
+
+        <input type="radio" id="n">
+        <label for="n">Não</label>
+        <br>
+
+        Cursos:
+        <input type="checkbox" name="fb" id="fb">
+        <label for="fb">Informaticabasica</label>
+
+
+        <input type="checkbox" name="sc" id="sc">
+        <label for="sc">Secreterio</label>
+
+        <input type="checkbox" name="lp" id="lp">
+        <label for="lp">logica de programação</label>
+
+        <input type="checkbox" name="ht" id="ht">
+        <label for="ht">HTML e CSS</label>
+
+        <input type="checkbox" name="js" id="js">
+        <label for="js">JavaScript</label>
+
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Pesquisa</legend>
+
+            já viajou pro esterior? <br>
+            <input type="radio" id="y">
+        <label for="y">Sim</label>
+
+        <input type="radio" id="n">
+        <label for="n">Não</label>
+        <br>
+
+        Quais continentes despertas mais interesse <br>
+        <input type="checkbox" name="am" id="am">
+        <label for="am">America do Sul</label>
+
+
+        <input type="checkbox" name="amn" id="amn">
+        <label for="amn">America do norte</label>
+
+        <input type="checkbox" name="amc" id="amc">
+        <label for="amc">America Central</label>
+
+        <input type="checkbox" name="af" id="af">
+        <label for="af">Àfrica</label>
+
+        <input type="checkbox" name="as" id="as">
+        <label for="as">Asia</label>
+
+        <input type="checkbox" name="ep" id="ep">
+        <label for="ep">Europa</label>
+        <br>
+
+        <label for="local">Cite ao menos 5 paises que voce tem vontade de visitar</label>
+        <input type="text" name="local" id="local">
+        <br>
+
+        mensage: <br>
+        <textarea></textarea>
+
+        <br>
+        <button type="submit">Send</button>
+
+        </fieldset>
+    </form>
+</body>
+</html>
