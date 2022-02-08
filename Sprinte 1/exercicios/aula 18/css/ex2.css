@@ -55,4 +55,13 @@ flex-direction: column;
 footer {
     background-color: #F6511D;
     height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    width: 200px;
+    height: 200px;
+    border-right: #8458FF 5px solid;
 }
