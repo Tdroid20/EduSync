@@ -1,0 +1,49 @@
+body {
+    max-width: 1200px;
+    width: 1200px;
+}
+.main {
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Rouge Script';
+    font-size: 96px;
+    color: #A38314;
+    text-align: end;
+}
+
+img {
+    width: 90%;
+    height: 90%;
+
+}
+
+#pg1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #F00A0A;
+}
+
+#pg2 {
+    text-align: end;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color:  #1B137B;
+}
+
+#pg3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color:  #0B6B2C;
+}
+
+#pg4 {
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color:  #000000;
+}
+

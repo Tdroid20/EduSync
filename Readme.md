@@ -1,2 +1,5 @@
 # Aulas onde é feito testes de desempenho
-> aula 7: `Sprinte 1\aula7.html` e `Sprinte 1\aula7.css`
+> aulas se encontram em `Sprint %d/test`
+> exercicios se encontram em `Sprint %d/exercicios/aula %d`
+# indice:
+    %d = numero correspondente ao respectivo conteudo

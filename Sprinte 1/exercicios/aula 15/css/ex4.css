@@ -1,0 +1,50 @@
+#main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#tnr {
+    font-family: 'Times New Roman', Times, serif;
+    color: 000;
+}
+
+#gor {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #EB2020;
+}
+
+
+#sans-serif {
+    text-align: end;
+}
+
+#vd {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #35ff
+}
+
+#sUI {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#ms {
+    font-family: 'MedievalSharp', cursive;
+    color: aqua
+}
+
+#ft {
+    font-family: 'Festive', cursive;
+    color: red;
+}
+
+#st {
+    font-family: 'Syne Tactile', cursive;
+    color: darkslateblue;
+}

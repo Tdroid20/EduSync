@@ -1,0 +1,39 @@
+body {
+    max-width: 1200px;
+    width: 1200px;
+}
+
+#main {
+    width: 80%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+img {
+    width: 98%;
+}
+
+#contact {
+    text-align: right;
+}
+
+#text1 {
+    text-align: right;
+    font-family: 'Roboto';
+    font-size: 24px;
+}
+
+h1 {
+    font-family: 'Seaweed Script';
+    font-size: 72px;
+    color: #A93983
+}
+
+#text2 {
+    font-family: 'QuickSand';
+    font-size: 18px;
+}
+
+#copyrite {
+    text-align: center;
+}

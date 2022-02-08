@@ -1,0 +1,52 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    background-color: #000000;
+}
+
+#logo {
+    width: 300px;
+    margin: 20px;
+}
+
+.main {
+    width: 1140px;
+}
+
+#title {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    color: #FF0101;
+    font-size: 30px;
+    font-family: 'Roboto';
+}
+
+#group1 {
+    display: flex;
+}
+
+#text1 {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-left: 100px;
+}
+
+#banner2 {
+    margin-left: 100px;
+}
+
+#pg1 {
+    width: 1000px;
+    margin-left: 100px;
+}
+
+footer {
+    background-color: #FF0101;
+    text-align: center;
+    color: #FFFFFF;
+}

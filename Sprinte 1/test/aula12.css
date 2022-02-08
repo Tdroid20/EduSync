@@ -1,0 +1,14 @@
+div {
+    box-sizing: border-box;
+    border-color: aqua;
+    background-color: black;
+    color: aliceblue;
+    width: 300px;
+    height: 300px;
+}
+ h3 {
+     color: aliceblue;
+     text-align: center;
+     text-justify: distribute;
+ }
+ 

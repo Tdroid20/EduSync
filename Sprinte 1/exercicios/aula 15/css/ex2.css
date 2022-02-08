@@ -1,0 +1,35 @@
+body {
+    max-width: 1140px;
+    width: 1140px;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: 'Roboto' 24px;
+    color: #000000;
+}
+h2 {
+    font-size: 30px;
+    font-family: 'Roboto' 24px;
+    color:  #2D8067;
+    text-align: center;
+}
+
+#main  {
+    width: 80%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.slogan {
+    text-align: center;
+}
+
+#banner {
+    width: 98%;
+}
+
+#contact {
+    text-align: right;
+}

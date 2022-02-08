@@ -1,0 +1,33 @@
+
+	body {
+		max-width: 1140px;
+		width: 1140px;
+	}
+	
+	#main-content {
+		width: 80%;
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+	
+	#title {
+		text-align: center;
+		color: #000;
+		font-size: 48px;
+		font-family: 'Roboto';
+	}
+	
+	#banner {
+		width: 98%;
+	}
+	
+	.sub-title {
+		color: #FC3003;
+		font-size: 30px;
+		font-family: 'Roboto';
+	}
+	
+	p {
+		font-family: 'Roboto';
+		color: #a8a8a8;
+	}
