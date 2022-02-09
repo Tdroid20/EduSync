@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.header {
+    display: flex;
+}
+
+.main {
+    width: 1000px;
+    margin: auto;
+}
+
+#headerT {
+    display: flex;
+    justify-content: space-between;
+    text-align: end;
+    padding-top: 30px;
+    padding-left: 800px;
+    font-family: 'Roboto';
+}
+
+#logo {
+    width: 300px;
+    margin: 20px;
+}
+
+#titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 72px;
+}
+
+
+.content {
+    display: flex;
+    font-family: 'Roboto';
+
+}
+
+.cont {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 400px;
+}
+
+#cont1, #cont2 {
+    display: flex;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+h3 {
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}

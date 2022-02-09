@@ -1,0 +1,70 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    background-color: #F0F3F3;
+    width: 100%;
+    height: 90px;
+}
+
+#headerT {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-left: 60px;
+}
+
+.label {
+    font-size: 30px;
+    font-family: 'Roboto';
+    color: #FC3003;
+    margin-top: 50px;
+}
+
+#content1 {
+    display: flex;
+}
+
+.content {
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: #6C6969;
+    width: 400px;
+}
+
+#main {
+    width: 1000px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.cards {
+    width: 300px;
+    height: 538px;
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: #6C6969;
+    display: flex;
+}
+
+section {
+    margin-right: 70px;
+}
+
+input {
+    width: 1110px;
+    height: 38px;
+}
+
+#txta {
+    width: 1110px;
+    height: 150px;
+}
+
+footer {
+    background-color: black;
+    color: #FFFFFF;
+    text-align: center;
+}
