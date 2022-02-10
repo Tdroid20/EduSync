@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/*inicio da nav */
+
+nav {
+    display: flex;
+    border: 2px solid black;
+}
+
+.navClass {
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: #FC5812;
+    font-size: 30px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    margin-left: 50px;
+}
+ul {
+    display: flex;
+    margin-left: 50px;
+    width: 400px;
+    justify-content: space-between;
+
+}
+.nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.nav ul li {
+    list-style-type: none;
+    display: flex;
+    margin-right: 50px;
+}
+/*fim da nav | inicio da main*/
+
+.main {
+    width: 1140px;
+    margin: auto;
+    font-family: 'Roboto';
+    font-weight: 100;
+}
+
+.CardsW {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+form {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#contactT {
+    color: #FC5812;
+}
+
+fieldset {
+    width: 700px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input, select {
+    width: 420px;
+    height: 38px;
+    border-radius: 4px;
+    border: 2px solid grey;
+}
+
+textarea {
+    width: 400px;
+    height: 125px;
+    border-radius: 4px;
+    border: 2px solid grey;
+}
+
+.btnC {
+    background-color: #FC5812;
+    width: 109px;
+    height: 39px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+
+.btn {
+    background-color: #FC5812;
+    width: 109px;
+    height: 39px;
+    border-radius: 5px;
+    margin-top: 15px;
+    border-color: #FC5812;
+}
+
+
+.footer {
+    background-color: #FC5812;
+    color: #FFFFFF;
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.Flex {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    display: flex;
+    border: 2px solid black;
+}
+
+.navClass {
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: blue;
+    margin-left: 50px;
+}
+ul {
+    display: flex;
+    margin-left: 50px;
+    width: 400px;
+    justify-content: space-between;
+
+}
+.nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav ul li {
+    list-style-type: none;
+    display: flex;
+    margin-right: 50px;
+}
