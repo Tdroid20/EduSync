@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/*inicio da nav */
+
+header {
+    width: 100%;
+    height: 80px;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.navBar {
+    display: flex;
+    width: 100%;
+    height: 80px;
+}
+
+.logoH {
+    margin-left: 40px;
+}
+
+.navItens {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+ul li {
+    display: flex;
+    list-style-type: none;
+}
+ul li a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 30px;
+}
+ul {
+    display: flex;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+#docTitle {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img, .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    margin: auto;
+}
+
+footer {
+    background-color: #660027;
+    color: #FFFFFF;
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* =========== Header ===========  */
+
+header {
+    width: 100%;
+    height: 80px;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.navBar {
+    display: flex;
+    width: 100%;
+    height: 80px;
+}
+
+.logoH {
+    margin-left: 40px;
+}
+
+.navItens {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: flex-end;
+
+}
+ul li {
+    display: flex;
+    list-style-type: none;
+}
+ul li a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 30px;
+}
+ul {
+    display: flex;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+/* =========== Main ===========  */
+
+.main {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#BannerMain {
+    margin-top: 30px;
+}
+
+.title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-size: 36px;
+    font-weight: 400;
+    color: #660027;
+}
+
+.content {
+    color: #6C6969;
+    font-family: 'Roboto';
+}
+
+.conteiner {
+    margin-top: 30px;
+    margin-left: 30px;
+    display: flex;
+}
+
+.cards {
+    width: 250px;
+    height: 470px;
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: #6C6969;
+    display: flex;
+    width: 250px;
+
+}
+
+.cardsR {
+    margin-right: 200px;
+    border: 1px solid #6C6969;
+
+}
+
+.titleCard {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #660027;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+}
+.btnCards {
+    width: 128px;
+    height: 42px;
+    color: #660027;
+    border-radius: 4px;
+    border: 1px solid #660027;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.description {
+    margin-left: 5%;
+}
+
+.PositionCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+/* =========== Footer ===========  */
+footer {
+    background-color: #660027;
+    color: #FFFFFF;
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

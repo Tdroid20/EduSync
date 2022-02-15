@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    padding: 0;
+}
+
+
+header {
+    max-width: 100%;
+    width: 100%;
+    background-color: #d3d3d3;
+}
+
+.navBar {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.listNav {
+    list-style-type: none;
+    margin: 10px;
+    text-decoration: none;
+}
+
+#navItens {
+    justify-content: end;
+    display: flex;
+}
+
+.linkNav {
+    text-decoration: none;
+    color: #4b2442;
+}
+
+.mainFlex {
+    display: flex;
+    flex-direction: column;
+}
+
+#group {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.main {
+    max-width: 900px;
+    margin: auto;
+    height: 500px;
+}
+
+.title {
+    margin: auto;
+    margin-top: 90px;
+}
+
+#events {
+    display: flex;
+    flex-direction: row;
+}
+
+.category {
+    margin-left: 50px;
+}
+
+#events a {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 200px;
+    height: 30px;
+}
+
+#save {
+    width: 128px;
+    height: 40px;
+    background-color: #6be20e;
+    border: none;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+
+
+footer {
+    background-color: #6be20e;
+    color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ----- DESKTOP ------- */
+@media (min-width: 900px) {
+
+header {
+    height: 100px;
+    }
+    
+#navItens {
+    color: #000;
+    font-size: 22px;
+    font-family: 'Roboto';	
+    }
+    
+#headerT {
+    font-size: 18px;
+    font-family: 'Roboto';
+    font-weight: normal;	
+}
+
+} /* end */
+
+@media (max-width: 319px) {
+    body {
+    display: none;
+    }
+}
+
+/* ----- TABLET ------- */
+@media (max-width: 899px) and (min-width: 650px) {
+
+header {
+    height: 100px;
+    }
+
+.navBar {
+    max-width: 650px;
+}
+    
+#navItens {
+    text-align: center;
+    color: #000;
+    font-size: 22px;
+    font-family: 'Roboto';	
+    }
+    
+#headerT {
+    font-size: 18px;
+    font-family: 'Roboto';
+    font-weight: normal;	
+    }
+
+.main {
+    max-width: 650px;
+}
+}
+
+
+/* ----- MOBILE ------- */
+@media (max-width: 649px) and (min-width: 320px) {
+    
+    header {
+        height: 100px;
+    }
+    
+    .navBar {
+        max-width: 320px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #navItens {
+        text-align: center;
+        color: #000;
+        font-size: 22px;
+        font-family: 'Roboto';	
+    }
+    
+    #headerT {
+        font-size: 18px;
+        font-family: 'Roboto';
+        font-weight: normal;	
+    }
+    .main {
+       max-width: 320px;
+    } 
+    #group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #register {
+        margin-top: 30px;
+    }
+}
