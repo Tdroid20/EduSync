@@ -7,6 +7,7 @@
 header {
     width: 100%;
     height: 80px;
+    padding-top: 15px;
 }
 
 nav {
@@ -52,13 +53,12 @@ ul {
 /* =========== Main ===========  */
 
 .main {
+    max-width: 1200px;
     margin-left: 5%;
     margin-right: 5%;
 }
 
-#BannerMain {
-    margin-top: 30px;
-}
+
 
 .title {
     margin-top: 20px;
@@ -76,23 +76,20 @@ ul {
 
 .conteiner {
     margin-top: 30px;
-    margin-left: 30px;
     display: flex;
+    justify-content: space-between;
 }
 
 .cards {
-    width: 250px;
     height: 470px;
     font-size: 14px;
     font-family: 'Roboto';
     color: #6C6969;
     display: flex;
     width: 250px;
-
 }
 
 .cardsR {
-    margin-right: 200px;
     border: 1px solid #6C6969;
 
 }
@@ -119,6 +116,16 @@ ul {
     justify-content: center;
     text-decoration: none;
     cursor: pointer;
+    transition: width, height 300ms;
+}
+
+.btnCards:hover {
+    background-color: #660027;
+    color:#FFFFFF;
+    box-shadow: #d40253;
+    text-shadow: #d40253;
+    width: 140px;
+    height: 45px;
 }
 
 .description {
@@ -143,4 +150,54 @@ footer {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+/* =========== Media query  ===========  */
+
+
+/* =========== Desktop  ===========  */
+#BannerMain {
+    max-width: 100%;
+    margin-top: 30px;
+}
+
+@media (max-width: 1022px) {
+    .main {
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+
+    .conteiner {
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+}
+
+/* =========== ¨Tablet  ===========  */
+
+@media (max-width: 683px) {
+    .main {
+        max-width: 683px;
+    }
+    .conteiner {
+        height: 911px;
+        width: 600px;
+        flex-wrap: wrap;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+    } 
+
+    footer {
+        z-index: 1000;
+    }
+}
+
+@media (max-width: 552px) {
+    .conteiner {
+        width: 599px;
+        height: 1387px;
+    }
 }
