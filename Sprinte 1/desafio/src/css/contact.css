@@ -141,7 +141,7 @@ fieldset {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-left: 50px;
+    margin-left: 5%;
 }
 
 .Flex {
@@ -157,9 +157,13 @@ fieldset {
         font-weight: 100;
         font-size: 14px;
     }
+
+    .Flex {
+        justify-content: space-between;
+    }
     
     .CardsW {
-        width: 20px;
+        max-width: 20px;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -274,6 +278,18 @@ fieldset {
         padding: 0;
         margin-top: 30px;
 
+    }
+}
+
+@media (max-width: 280px) {
+    fieldset {
+        width: 100%;
+    }
+}
+
+@media (max-width: 295px) {
+    fieldset {
+        width: 100%;
     }
 }
 

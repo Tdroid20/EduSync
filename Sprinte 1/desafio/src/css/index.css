@@ -33,7 +33,6 @@ nav {
     width: 100%;
     justify-content: end;
     align-items: flex-end;
-
 }
 ul li {
     display: flex;
@@ -180,15 +179,18 @@ footer {
     .main {
         max-width: 683px;
     }
+    .PositionCenter {
+        margin-bottom: 10px
+    }
     .conteiner {
-        height: 911px;
-        width: 600px;
+        max-width: 600px;
         flex-wrap: wrap;
     }
     .cards {
         display: flex;
         flex-direction: column;
-    } 
+        margin-bottom: 10px;
+    }
 
     footer {
         z-index: 1000;
@@ -196,8 +198,27 @@ footer {
 }
 
 @media (max-width: 552px) {
+    header {
+        height: 150px;
+    }
     .conteiner {
-        width: 599px;
-        height: 1387px;
+        max-width: 599px;
+        justify-content: center;
+    }
+    .cards {
+        margin-bottom: 10px;
+    }
+    nav {
+        flex-direction: column;
+    }
+    .navItens ul {
+        flex-direction: column;
+    }
+    .navItens ul li {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .navItens {
+        justify-content: center;
     }
 }
