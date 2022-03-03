@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "prompt-input": "^3.0.0",
+    "prompt-question": "^5.0.2"
+  }
+}
