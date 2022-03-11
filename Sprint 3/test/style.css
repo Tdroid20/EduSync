@@ -44,4 +44,25 @@ input {
     margin-top: 5px;
     border-radius: 15px;
     text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.btnSub {
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: #212125 2px solid;
+    background-color: #212125;
+}
+
+.btnSub:hover {
+    border: #41eb17 2px solid;
+    background-color: #41eb17;
+    transition: border, background-color 300ms;
+    cursor: pointer;
 }

@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Meu cep</title>
 </head>
 <body>
@@ -17,15 +16,17 @@
                 </div>
             </div>
             <div class="card">
-                <div id="content">
-                    <input type="number" name="cep" id="cep" placeholder="Digite seu cep" >
-                    <input type="text" name="logradouro" id="logradouro" placeholder="Digite seu logradouro">
-                    <input type="text" name="bairro" id="bairrobairro" placeholder="Digite seu bairro">
-                    <input type="text" name="localidade" id="localidade" placeholder="Digite seu localidade">
-                    <input type="text" name="uf" id="uf" placeholder="Digite seu uf">
-                </div>
+                <form id="content">
+                    <input type="text" name="cep" class="cep" id="cep" placeholder="Digite seu cep" >
+                    <input type="text" name="logradouro" class="logradouro" placeholder="Digite seu logradouro">
+                    <input type="text" name="bairro" class="bairro" placeholder="Digite seu bairro">
+                    <input type="text" name="localidade" id="localidade" placeholder="Digite seu localidade" value="buscando...">
+                    <input type="text" name="uf" class="uf" placeholder="Digite seu uf">
+                    <button type="submit" class="btnSub">Pesquisar</button>
+                </form>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
