@@ -1,10 +1,5 @@
-let cep = document.getElementById('cep')
-let logradouro = document.getElementsByClassName('logradouro')
-let bairro = document.getElementsByClassName('bairro')
-let localidade = document.getElementById('localidade').value
-let uf = document.getElementsByClassName('uf')
-
 let resultLocal
+const cep = document.getElementById('cep')
 const consult = CEP => {
     let url = `https://viacep.com.br/ws/${CEP}/json/`
 
@@ -17,11 +12,11 @@ const consult = CEP => {
     })
     .then(res => res.json())
     .then(result => {
-        console.log(result)
-        localidade = result.localidade
-        logradouro.value = result.logradouro
-        bairro.value = result.bairro
-        uf.value = result.uf
+        console.log(result.bairro)
+        document.getElementById('localidade').value = result.localidade
+        document.getElementById('logradouro').value = result.logradouro
+        document.getElementById('bairro').value = result.bairro
+        document.getElementById('uf').value = result.uf
     }).catch(err => console.log(err))
 }
 
