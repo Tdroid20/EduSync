@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    max-width: 100%;
+    background-color: #F2890D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 616px;
+}
+
+.card {
+    max-width: 95%;
+    height: 500px;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    border: white 1px solid;
+    border-radius: 20px;
+    margin-top: 90px;
+    display: flex;
+}
+
+#userImage {
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
+    margin-left: 90px;
+}
+
+.title {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+#question {
+    margin-left: 90px;
+}
+
+#SC1, #SC2 {
+    width: 495px;
+    height: 402px;
+}
+
+input, select {
+    border: 3px solid #B0A3A3;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 250px;
+    height: 30px;
+}
+
+#start {
+    background: #1180E6;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    margin-left: 70px;
+}
+
+#line {
+    width: 3px;
+    height: 300px;
+    background-color: #000000;
+    margin-top: 60px;
+}
+
+#Text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 29px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#play {
+    background: #F2890D;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 70px;
+}
+
+#gameInp {
+    margin-left: 60px;
+}
+
+#Info {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.titulo{
+    background-color: aqua;
+    width: 160px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+}
+
+#theGame {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Roboto';
+    padding-top: 15%;
+    padding-left: 2%;
+}
+
+@media (max-width: 746px) {
+    .main {
+        height: 1000px;
+    }
+    .card {
+        flex-direction: column;
+        height: 900px;
+    }
+    #line {
+        display: none;
+    }
+    .titulo{
+        background-color: aqua;
+        width: 160px;
+        height: 100px;
+        position: absolute;
+        left: 30%;
+        top: -50px;
+    }
+}

@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* =========== Header ===========  */
+
+header {
+    width: 100%;
+    height: 80px;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.navBar {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: aqua;
+}
+
+.logoH {
+    margin-left: 40px;
+}
+
+.navItens {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+ul li {
+    display: flex;
+    list-style-type: none;
+}
+ul li a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 30px;
+}
+ul {
+    display: flex;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+
+
+/* =========== Main ===========  */
+
+.btnC {
+    cursor: pointer;
+
+}
+.main {
+    max-width: 1140px;
+    height: 600px;
+    margin: auto;
+    font-family: 'Roboto';
+    font-weight: 100;
+}
+
+.CardsW {
+    width: 120px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contactT {
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#contactT {
+    margin-top: 30px;
+    color: #660027;
+}
+
+fieldset {
+    width: 700px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    input, select {
+        width: 420px;
+        height: 38px;
+        border-radius: 4px;
+        border: 2px solid #660027;
+    }
+    
+    textarea {
+        width: 420px;
+        height: 125px;
+        border-radius: 4px;
+        border: 2px solid #660027;
+    }
+    h3 {
+        font-family: 'Roboto';
+        font-weight: 100;
+        color: #7B7676;
+        margin-top: 15px;
+
+    }
+.btnC {
+    background-color: #660027;
+    width: 109px;
+    height: 39px;
+    border-radius: 5px;
+    margin-top: 15px;
+    border: none;
+    color: #FFFFFF;
+}
+
+
+
+.footer {
+    background-color: #660027;
+    color: #FFFFFF;
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.Flex {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .main {
+        max-width: 600px;
+        margin: auto;
+        font-family: 'Roboto';
+        font-weight: 100;
+        font-size: 14px;
+    }
+
+    .Flex {
+        justify-content: space-between;
+    }
+    
+    .CardsW {
+        max-width: 20px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    fieldset {
+        width: 320px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    input, select {
+        width: 263px;
+        height: 38px;
+        border-radius: 4px;
+        border: 2px solid grey;
+    }
+    
+    textarea {
+        width: 263px;
+        height: 128px;;
+        border-radius: 4px;
+        border: 2px solid grey;
+    }
+    
+    .btnC {
+        background-color: #660027;
+        width: 109px;
+        height: 39px;
+        border-radius: 5px;
+        margin-top: 15px;
+        margin-bottom: 5%;
+        border: none;
+    }
+    
+    
+    
+    
+    
+    .footer {
+        background-color: #660027;
+        color: #FFFFFF;
+        margin-top: 40px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 360px) {
+    header {
+        width: 100%;
+        height: 200px;
+    }
+
+
+    .main {
+        max-width: 360px;
+        height: 100%;
+    }
+    fieldset{
+        width: 90%;
+    }
+    ul{
+        width: 360px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    li{
+        margin-right: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .Flex {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100%;
+    }
+
+    .footer {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0;
+        margin-top: 30px;
+
+    }
+}
+
+@media (max-width: 280px) {
+    fieldset {
+        width: 100%;
+    }
+}
+
+@media (max-width: 295px) {
+    fieldset {
+        width: 100%;
+    }
+}
+
+/* =========== Footer ===========  */

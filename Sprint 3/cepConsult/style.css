@@ -3,6 +3,58 @@
     padding: 0;
 }
 
+/* =========== Header ===========  */
+
+header {
+    width: 100%;
+    height: 80px;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.navBar {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: aqua;
+}
+
+.logoH {
+    margin-left: 40px;
+}
+
+.navItens {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+ul li {
+    display: flex;
+    list-style-type: none;
+}
+ul li a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 30px;
+}
+ul {
+    display: flex;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+
+
+/* =========== Main ===========  */
+
 .main {
     max-width: 1200px;
     margin-left: 5%;
