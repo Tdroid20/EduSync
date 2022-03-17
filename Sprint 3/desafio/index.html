@@ -4,25 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/index.css">
     <link rel="shortcut icon" href="./src/assets/GameController icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Kranky&family=Roboto:wght@900&family=Rouge+Script&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/index.css">
     <title>Game dahora</title>
 </head>
 <body>
     <div class="main">
         <div class="card">
-            <div class="titulo"><h1  id="theGame">O JOGO</h1></div>
-            <section id="SC1">
-                <img src="./src/assets/User.png" alt="UserImage" id="userImage">
+                <div class="titulo"><h1  id="theGame">OJOGO</h1></div>
+            <section class="SC">
+                <div class="gameInp">
+                    <img src="./src/assets/User.png" alt="UserImage" id="userImage">
                 <br>
                 <div id="question">
-                    <label for="nickname" class="title">Nick:</label>
+                    <div class="labels">
+                        <label for="nickname" class="title">Nick:</label>
+                    </div>
                     <br>
                     <input type="text" name="nickname" id="nickname" maxlength="11">
                     <br>
-                    <label for="interval" class="title">Intervalo:</label>
+                    <div class="labels">
+                        <label for="interval" class="title" >Intervalo:</label>
+                    </div>
                     <br>
                     <select name="interval" id="interval">
                         <option value="1" selected>Opção 1: 1 a 10</option>
@@ -37,15 +49,18 @@
                         </div>
                     </button>
                 </div>
+                </div>
             </section>
             <div id="line"></div>
-            <section id="SC2">
+            <section class="SC">
                 <p id="Text">Olá <span id="player"><strong>Jogador</strong></span>, vamos jogar!
                     De acordo com a opçao de intervalo que 
                     você escolheu, descubra o número.</p>
                     <br>
-                    <div id="gameInp">
-                        <label for="game" class="title">Digite um numero:</label>
+                    <div class="gameInp">
+                        <div id="autoCorrect">
+                            <label for="game" class="title">Digite um numero:</label>
+                        </div>
                         <br>
                         <input type="text" name="game" id="game">
                         <div id="st1">

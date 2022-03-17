@@ -1,3 +1,5 @@
+/* https://highframe.tech */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,34 +20,35 @@
     width: 95%;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
     background-color: white;
     border: white 1px solid;
     border-radius: 20px;
     margin-top: 90px;
-    display: flex;
 }
 
 #userImage {
     max-width: 200px;
     width: 200px;
     height: 200px;
-    margin-left: 90px;
 }
 
 .title {
     font-family: 'Press Start 2P';
     font-style: normal;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #question {
-    margin-left: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-#SC1, #SC2 {
+.SC {
     width: 495px;
     height: 402px;
 }
@@ -65,7 +68,6 @@ input, select {
     border-radius: 20px;
     width: 100px;
     height: 30px;
-    margin-left: 70px;
 }
 
 #line {
@@ -78,7 +80,7 @@ input, select {
 #Text {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 29px;
     line-height: 29px;
     text-align: center;
@@ -90,38 +92,48 @@ input, select {
     border: 3px solid #000000;
     box-sizing: border-box;
     border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80px;
+    height: 30px;
+}
+
+.gameInp {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 30px;
-    margin-top: 30px;
-    margin-left: 70px;
-}
-
-#gameInp {
-    margin-left: 60px;
+    flex-direction: column;
 }
 
 #Info {
-    margin-left: 50px;
     margin-top: 10px;
 }
 
-.titulo{
-    background-color: aqua;
-    width: 160px;
-    height: 100px;
+.titulo {
+    background-color: #1180E7;
+    width: 240px;
+    height: 95px;
     position: absolute;
     top: -50px;
+    border-radius: 20px;
 }
 
 #theGame {
-    font-size: 40px;
-    font-weight: 900;
-    font-family: 'Roboto';
-    padding-top: 15%;
-    padding-left: 2%;
+    font-family: 'Squada One';
+    text-align: center;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 74px;
+}
+
+.labels {
+    width: 100%;
+}
+
+#autoCorrect {
+    text-align: center;
 }
 
 @media (max-width: 746px) {
@@ -136,11 +148,41 @@ input, select {
         display: none;
     }
     .titulo{
-        background-color: aqua;
         width: 160px;
         height: 100px;
         position: absolute;
-        left: 30%;
+        left: 10%;
+        top: -50px;
+    }
+    .Text {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 526px) {
+    .SC {
+        max-width: 495px;
+        width: auto;
+    }
+}
+
+@media (max-width: 428px) {
+
+    .main {
+        max-width: 428px;
+        height: 1421px;
+    }
+    .Text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 330px) {
+    .titulo{
+        width: 160px;
+        height: 100px;
+        position: absolute;
+        left: 25%;
         top: -50px;
     }
 }
