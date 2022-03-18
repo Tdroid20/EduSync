@@ -159,6 +159,8 @@ input, select {
     }
 }
 
+
+
 @media (max-width: 526px) {
     .SC {
         max-width: 495px;
@@ -177,7 +179,7 @@ input, select {
     }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 409px) {
     .titulo{
         width: 160px;
         height: 100px;
