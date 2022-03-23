@@ -1,0 +1,20 @@
+{
+  "name": "terraria",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "@Tdroid2.0",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.6.2"
+  },
+  "scripts": {
+    "build": "tsc -init",
+    "start": "ts-node index.ts",
+    "compile": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.22",
+    "dotenv": "^16.0.0",
+    "ts-node": "^10.7.0"
+  }
+}
