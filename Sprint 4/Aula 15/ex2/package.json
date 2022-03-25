@@ -1,14 +1,12 @@
 {
-  "name": "typeskript",
+  "name": "ex2",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Tdroid",
   "license": "MIT",
-
   "dependencies": {
     "typescript": "^4.6.2"
   },
-
   "scripts": {	
     "compile": "tsc",
     "build": "tsc --init",
