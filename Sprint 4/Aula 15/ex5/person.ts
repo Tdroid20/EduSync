@@ -33,7 +33,7 @@ class Person {
     calcYears() {
         let _born = this.born
         let date: Date = new Date();
-        let yearActual = date.getFullYear()
+        let yearActual = date.getFullYear();
 
         let yearsOld = yearActual - _born.year;
         console.log(yearsOld)

@@ -35,4 +35,7 @@ class Person {
 }
 let person = new Person(`Tdroid`, { day: 20, month: 1, year: 2006 }, 1.90);
 person.calcYears();
-person.print('height');
+person.print('all');
+/*
+==========================// powered by Tdroid 2.0 //========================
+*/ 
