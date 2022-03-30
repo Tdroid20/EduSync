@@ -1,0 +1,17 @@
+{
+  "name": "employee",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tdroid",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.6.3"
+  },
+
+  "scripts": {	
+    "compile": "tsc",
+    "build": "tsc --init",
+    "dev": "tsc --watch",
+    "start": "node ./dist/employee.js"
+  }
+}

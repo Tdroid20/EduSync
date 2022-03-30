@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 48px;
+    background-color:  #F8F9FA; /* #F8F9FA */
+}
+
+#divH {
+    width: 120px;
+    height: 48px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#titleH {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+#packages {
+    height: 399px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.input {
+    /* /Gray / White */
+
+    background: #FFFFFF;
+    /* Stroke/Input */
+
+    border: 1px solid #CED4DA;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 500px;
+    height: 38px;
+    padding-left: 20px;
+    font-family: 'Inter';
+}
+
+.data {
+    width: 250px;
+    height: 28px;
+    padding-left: 10px;
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+}
+
+label {
+    font-family: 'Inter';
+}
+
+.textArea {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-family: 'Inter';
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+}
+
+.options {
+    font-size: 12px;
+}
+
+.font::placeholder {
+    font-size: 16px;
+}
+
+.sc {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+#scs {
+    display: flex;
+}
+
+#SC1 {
+    width: 589px;
+}
+
+.left20 {
+    margin-left: 20px;
+}
+
+.labels {
+    /* Semi-Bold / H4 Heading */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    /* identical to box height */
+
+
+    /* Heading/Title Color */
+
+    color: #152536;
+}
+
+.titles {
+    /* Semi-Bold / H4 Heading */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+margin-bottom: 30px;
+/* identical to box height */
+
+
+/* Heading/Title Color */
+
+color: #152536;
+}
+
+#SC2 {
+    width: 589px;
+}
+
+#description {
+    width: 490px;
+    height: 120px;
+}
+
+#btFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#siginup {
+    background: #8458FF;
+    border-radius: 4px;
+    border: #8458FF solid 2px;
+    width: 108px;
+    height: 39px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.card {
+    /* Rectangle 175 */
+    width: 1080px;
+    height: 265px;
+    /* /Gray / White */
+
+    background: #FFFFFF;
+    /* Stroke/light */
+
+    border: 1px solid #DEE2E6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    padding-left: 126px;
+    padding-top: 50px;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.packageTitle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    color: #152536;
+    margin-bottom: 20px;
+}
+
+.packageDesc {
+    width: 508px;
+    height: 48px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6C757D;
+}
+
+.packageDate {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.packageBtn {
+    align-items: center;
+    width: 78px;
+    height: 39px;
+    
+}
+
+.edit {
+    background: #FFC107;
+    border-radius: 4px;
+    border-width: 0;
+    border-color: #FFC107;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* /Gray / White */
+
+    color: #FFFFFF;
+}
+
+.delete {
+    background: #DC3545;
+    border-radius: 4px;
+    border-width: 0;
+    border-color: #DC3545;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 10px;
+}

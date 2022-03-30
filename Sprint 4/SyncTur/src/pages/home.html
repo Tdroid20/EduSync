@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="shortcut icon" href="../assets/SyncTur.png" type="image/x-icon">
+    <title>SyncTur</title>
+</head>
+<body>
+    <header>
+        <div id="divH">
+            <h1 id="titleH">SyncTur</h1>
+        </div>
+    </header>
+    <div class="main">
+        <div id="packages">
+            <section class="sc">
+                <div id="SC1">
+                <h2 class="titles">Pacote</h2>
+                <input type="text" placeholder="Digite o nome completo" class="input font">
+                <div id="scs">
+                    <div id="scs1">
+                        <p class="labels">Satus do pacote</p>
+                        <input type="checkbox" name="active" id="active">
+                        <label for="active" class="options">Ativo</label>
+                        <br>
+                        <input type="checkbox" name="inactive" id="inactive" checked>
+                        <label for="inctive" class="options">Intivo</label>
+                    </div>
+                    <div id="scs2">
+                        <p class="labels left20">Data de viagem</p>
+                        <input type="text font" placeholder="Data" class="left20 data">
+                    </div>
+                </div>
+            </div>
+            <div id="SC2">
+                <p class="titles">Descrição</p>
+                
+                <textarea name="description" id="description" cols="30" rows="10" placeholder="Digite sua mensagem" class="textArea font"></textarea>
+            </div>
+        </section>
+
+        <div id="btFlex">
+            <button id="siginup">Cadastrar</button>
+        </div>
+    </div>
+    <div class="packagesList">
+        <div class="card" id="pacoteX">
+                <p class="packageTitle">Pacote X</p>
+                <p class="packageDesc">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <br>
+                <p class="packageDate">Data da viagem: 17/ago/22</p>
+                <div class="btn">
+                    <button class="packageBtn edit">Editar</button>
+                    <button class="packageBtn delete">Excluir</button>
+                </div>
+            </div>
+
+            <div class="card" id="pacoteY">
+                <p class="packageTitle">Pacote Y</p>
+                <p class="packageDesc">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <br>
+                <p class="packageDate">Data da viagem: 17/ago/22</p>
+                <div class="btn">
+                    <button class="packageBtn edit">Editar</button>
+                    <button class="packageBtn delete">Excluir</button>
+                </div>
+            </div>
+
+            <div class="card" id="pacoteZ">
+                <p class="packageTitle">Pacote Z</p>
+                <p class="packageDesc">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <br>
+                <p class="packageDate">Data da viagem: 17/ago/22</p>
+                <div class="btn">
+                    <button class="packageBtn edit">Editar</button>
+                    <button class="packageBtn delete">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/javascript/packages.js"></script>
+</body>
+</html>
