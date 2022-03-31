@@ -1,31 +1,45 @@
-interface IPackages {
-    name: string;
-    description: string;
-    date: Date;
-    status: boolean;
-    id: number;
+import fetch from 'node-fetch';
+
+let pack: any[] = [];
+
+const consult = () => {
+    let $url = `https://62361b7feb166c26eb2f488a.mockapi.io/pacotes`;
+
+    fetch($url, {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json'}
+    })
+    .then(res => res.json())
+    .then(data => {
+        let resultConvert: any = data;
+        let result: any[] = resultConvert;
+
+        for (let i = 0; i < result.length; i++) {
+            pack[i] = result[i]
+            console.log(pack[i])
+        }
+        packagesLoad()
+    })
 }
 
-let idActual = 0
+consult()
 
-class Signup {
-    name: string;
-    description: string;
-    date: Date;
-    status: boolean;
-    id: number;
+const packagesLoad: any = () => {
+    const div: any = document.getElementById('packagesList')
 
-    constructor(_name: string, _description: string, _date: Date, _status: boolean, _id: number) {
-        this.name = _name;
-        this.description = _description;
-        this.date = _date;
-        this.status = _status;
-        this.id = _id;
-    }
-
-    Signup(vName: string, vData: Date, vStatus: boolean, vDescription: string) {
-        idActual = idActual + 1
-        let id: number = idActual
-
+    for (let i = 0; i < pack.length; i++) {
+        const meses = ["jan", "fev", "mar", "abr", "mai", "jun", "jul","ago","set","out","nov","dez"];
+        let data = new Date(pack[i].data);
+        let dataFormatada = (+ (data.getDate() ) + '/' + meses[(data.getMonth())] + '/' + data.getFullYear());
+        
+        div.innerHTML += `<div class="card" id="pacote${pack[i].nome}">
+    <p class="packageTitle">${pack[i].nome}</p>
+    <p class="packageDesc">${pack[i].descricao}</p>
+    <br>
+    <p class="packageDate">Data da viagem: ${dataFormatada}</p>
+    <div class="btn">
+        <button class="packageBtn edit">Editar</button>
+        <button class="packageBtn delete">Excluir</button>
+    </div>`;
     }
 }
