@@ -9,6 +9,7 @@
     <title>SyncTur</title>
 </head>
 <body>
+    <div id="editLink"></div>
     <header>
         <div id="divH">
             <h1 id="titleH">SyncTur</h1>
@@ -19,19 +20,19 @@
             <section class="sc">
                 <div id="SC1">
                 <h2 class="titles">Pacote</h2>
-                <input type="text" placeholder="Digite o nome completo" class="input font">
+                <input type="text" placeholder="Digite o nome completo" class="input font" id="name">
                 <div id="scs">
                     <div id="scs1">
-                        <p class="labels">Satus do pacote</p>
-                        <input type="checkbox" name="active" id="active">
-                        <label for="active" class="options">Ativo</label>
-                        <br>
-                        <input type="checkbox" name="inactive" id="inactive" checked>
-                        <label for="inctive" class="options">Intivo</label>
+                        <p class="labels">Status do pacote</p>
+                            <input type="radio" name="bah" id="active" class="saiDoMeuPé">
+                            <label for="active" class="options">Ativo</label>
+                            <br>
+                            <input type="radio" name="bah" id="inactive" checked value=false>
+                            <label for="inctive" class="options">Intivo</label>
                     </div>
                     <div id="scs2">
                         <p class="labels left20">Data de viagem</p>
-                        <input type="text font" placeholder="Data" class="left20 data">
+                        <input type="date" placeholder="Data" class="left20 data" id="date">
                     </div>
                 </div>
             </div>
@@ -43,13 +44,28 @@
         </section>
 
         <div id="btFlex">
-            <button id="siginup">Cadastrar</button>
+            
         </div>
     </div>
-    <div class="packagesList" id="packagesList">
+        <div class="packagesList" id="packagesList">
         
         </div>
     </div>
+    <footer class="rodape">
+        <h3 class="fundo">SyncTur</h3>
+        <div class="linha"></div>
+        <div class="pFooter">
+            <br>
+            <p id="p1" class="SoloRoboto"> Company Inc, 8901 Marmora Road, Glasspow, DO4 89GR</p>
+            <br>
+            <p id="p2" class="SoloRoboto"> Call us now toll free: (800)2345-6789</p>
+            <br>
+            <p id="p3" class="SoloRoboto"> Costumer support suporrt@demolink.org</p>
+            <br>
+            <p id="p4" class="SoloRoboto"> Skype: Sample-username</p>
+            <br>
+        </div>
+    </footer>
     <script src="../scripts/javascript/packages.js"></script>
 </body>
 </html>
