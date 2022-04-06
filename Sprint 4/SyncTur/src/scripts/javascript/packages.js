@@ -1,4 +1,7 @@
 "use strict";
+/*
+===============================// Rebuild //================================
+*/
 let pack = [];
 const consult = () => {
     let $url = `https://62361b7feb166c26eb2f488a.mockapi.io/pacotes`;
@@ -18,9 +21,9 @@ const consult = () => {
     });
 };
 consult();
-let resgisterBTN = `<button id="siginup" class="siginup" onclick="$register()">Cadastrar</button>`
-let rquestUpBTN = `<button id="save" class="siginup" onclick="$save()" value="false">Salvar</button>`
-const packagesLoad = () => {
+let resgisterBTN = `<button id="siginup" class="siginup" onclick="$register()">Cadastrar</button>`;
+let rquestUpBTN = `<button id="save" class="siginup" onclick="$save()" value="false">Salvar</button>`;
+const packagesLoad = (aditive) => {
     const div = document.getElementById('packagesList');
     let divInsert = ``;
     for (let i = 0; i < pack.length; i++) {
@@ -39,11 +42,10 @@ const packagesLoad = () => {
         </div>`;
         div.innerHTML = divInsert;
         const btn = document.getElementById('btFlex');
-        btn.innerHTML = resgisterBTN
+        btn.innerHTML = resgisterBTN;
+        aditive;
     }
 };
-
-
 const $register = () => {
     const inputName = document.getElementById('name');
     const inputDate = document.getElementById('date');
@@ -91,44 +93,53 @@ const $register = () => {
 };
 const $delete = (indice) => {
     pack.splice(indice, 1);
-    packagesLoad();
+    if (!pack[0]) {
+        let divRepair = document.getElementById('packagesList');
+        let F = divRepair.innerHTML = ``;
+        packagesLoad(F);
+    }
+    else {
+        packagesLoad();
+    }
 };
-
-let documentEdit = []
-let editMode = false
+let documentEdit = [];
+let editMode = false;
 let $save = () => {
-    editMode = false
-    console.log(editMode)
-    $editMode(documentEdit)
-}
+    editMode = false;
+    console.log(editMode);
+    $editMode(documentEdit);
+};
 const $editMode = (edit) => {
-    console.log(editMode)
+    console.log(editMode);
     const inputName = document.getElementById('name');
     const inputDate = document.getElementById('date');
     const inputDesc = document.getElementById('description');
     const inputRadio = document.querySelector('input[name="bah"]:checked');
-    
     let _name = inputName.value;
     let _date = inputDate.value;
     let _desc = inputDesc.value;
     let _status = inputRadio.value;
-
     edit.nome = _name;
     edit.data = _date;
-    edit.descricao = _desc
-    if(_status == "false") {
-        edit.status = false
-    } else if(_status == "true") {
-        edit.status = true
+    edit.descricao = _desc;
+    if (_status == "false") {
+        edit.status = false;
     }
-
-    if(editMode == true) {
-        document.getElementById('btFlex').innerHTML = ``
-        document.getElementById('btFlex').innerHTML = rquestUpBTN
-        console.log(editMode)
-    } else {
-        document.getElementById('btFlex').innerHTML = ``
-        document.getElementById('btFlex').innerHTML = resgisterBTN;
+    else if (_status == "true") {
+        edit.status = true;
+    }
+    if (editMode == true) {
+        let resBtn = document.getElementById('btFlex');
+        resBtn.innerHTML = ``;
+        let insertBTN = document.getElementById('btFlex');
+        insertBTN.innerHTML = rquestUpBTN;
+        console.log(editMode);
+    }
+    else {
+        let resBTN = document.getElementById('btFlex');
+        resBTN.innerHTML = ``;
+        let insertBTN = document.getElementById('btFlex');
+        insertBTN.innerHTML = resgisterBTN;
         let resName = document.getElementById('name');
         let resDate = document.getElementById('date');
         let resdesc = document.getElementById('description');
@@ -137,42 +148,43 @@ const $editMode = (edit) => {
         resDate.value = '';
         resdesc.value = '';
         packagesLoad();
-        console.log(editMode)
+        console.log(editMode);
     }
-    
-}
+};
 const $edit = (id) => {
     const inputName = document.getElementById('name');
     const inputDate = document.getElementById('date');
     const inputDesc = document.getElementById('description');
     const inputRadio = document.querySelector('input[name="bah"]:checked');
-    
     let edit = pack.filter(x => x.id == id)[0];
-    console.log(edit)
+    console.log(edit);
     let _name = inputName.value;
     let _date = inputDate.value;
     let _desc = inputDesc.value;
     let _status = inputRadio.value;
-
     const meses = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
-    let DataEdit = Date.UTC(edit.data);
-    const formatYmd = date => date.toISOString().slice(0, 10);
-
+    let data = new Date(edit.data);
+    let dataNova = data.toLocaleDateString('en-US');
+    console.log(dataNova);
+    const formatYmd = (date) => date.toISOString().slice(0, 10);
     console.log(formatYmd(new Date(edit.data)));
-    
-    document.getElementById('name').value = edit.nome;
-    document.getElementById('date').value = formatYmd(new Date(edit.data));
-    document.getElementById('description').value = edit.descricao;
-
-    if(_status == "false" || _status == false) {
-        document.querySelector("#inactive").checked
-    } else if(_status == "true" || _status == true) {
-        document.querySelector("#active").checked
+    let name = document.getElementById('name');
+    name.value = edit.nome;
+    let date = document.getElementById('date');
+    date.value = formatYmd(new Date(edit.data));
+    let desc = document.getElementById('description');
+    desc.value = edit.descricao;
+    if (_status == "false" || _status == false) {
+        let ina = document.querySelector("#inactive");
+        ina.checked;
+    }
+    else if (_status == "true" || _status == true) {
+        let act = document.querySelector("#active");
+        act.checked;
     }
     window.location.href = `http://localhost:3000/src/pages/home.html#editLink`;
-    
     editMode = true;
-    documentEdit = edit
-    console.log(editMode)
-    $editMode(edit)
-}
+    documentEdit = edit;
+    console.log(editMode);
+    $editMode(edit);
+};

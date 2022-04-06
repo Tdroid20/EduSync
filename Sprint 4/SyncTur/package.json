@@ -12,6 +12,6 @@
     "compile": "tsc",
     "build": "tsc --init",
     "dev": "tsc --outDir ./src/scripts/javascript --watch",
-    "start": "node ./dist/packages.js"
+    "start": "node ./src/scripts/javascript"
   }
 }

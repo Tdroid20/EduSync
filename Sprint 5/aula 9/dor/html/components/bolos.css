@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    border: 1px solid #D0CCCC;
+    box-sizing: border-box;
+}
+
+#navList {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+#left {
+    width: 100vw;
+    justify-content: end;
+    align-items: flex-end;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.navItems {
+    list-style: none; 
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.texts {
+    color: black;
+    text-decoration: none;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+#logo {
+    width: 200px;
+    height: 62.85px;
+    margin-top: 15px;
+    margin-left: 40px;
+}
