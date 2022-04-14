@@ -1,0 +1,44 @@
+/*
+===============================// footer //=====================================
+*/
+
+.rodape { 
+    background-color: #F6511D;
+    height: 200px;
+    font-family: 'Inter';
+    margin-top: 77px;
+    display: flex;
+    justify-content: space-evenly;
+    color: aliceblue;
+    justify-content: center;
+    width: 100%;
+}
+
+.SoloRoboto {
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.pFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 40px;
+    font-family: 'Roboto';
+}
+
+.fundo {
+    width: 177px;
+    height: 62px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    margin-top: 64px;
+}
+
+.linha {
+    border: 1px solid #FFFFFF;
+    height: 170px;
+    margin-top: 20px;
+}

@@ -1,14 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import './pages/home.jsx'
 import Home from './pages/home.jsx';
+import UserPage from './pages/user.jsx';
+import { BrowserRouter, Route, Routes, Navigate,  } from 'react-router-dom'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function Router() {
+  return (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Navigate replace to="/home" />} />
+      <Route element={ <Home /> } path='/home'/>
+      <Route element={ <UserPage />} path='/users' />
+    </Routes>
+  </BrowserRouter>
+  )
+}
+
 root.render(
   <React.StrictMode>
-    <Home />
+    <Router />
   </React.StrictMode>
 );
 
