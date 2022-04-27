@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    width: 100%;
+    height: 132px;
+    background: #0A0909;
+}
+
+#copyraite {
+    display: flex;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FBFBFB;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.network {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icons {
+    margin-left: 20px;
+    cursor: pointer;
+}

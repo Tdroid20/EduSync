@@ -3,8 +3,8 @@
             <head>
             <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
             </head>
-            <div className="main">
-            <div class="box">
+            <div ClassNameName="main">
+            <div ClassName="box">
                 <img src={logo} id="logo"/>
                 <div id="title">
                 SITE EM MANUTENÇÃO
@@ -17,8 +17,8 @@
             </div>
 */
 import React from "react";
-import './css/maintenance.css';
-import logo from '../assets/logoColored.png'
+import './maintenance.css';
+import logo from '../../assets/logoColored.png'
 
 function Off() {
     return(
@@ -26,8 +26,8 @@ function Off() {
             <head>
             <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
             </head>
-            <div className="main">
-            <div class="box">
+            <div ClassName="main">
+            <div ClassName="box">
                 <img src={logo} id="logo"/>
                 <div id="title">
                 SITE EM MANUTENÇÃO

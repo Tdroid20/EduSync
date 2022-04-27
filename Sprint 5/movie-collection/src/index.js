@@ -1,9 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
-import Home from './pages/home.jsx';
-import UserPage from './pages/user.jsx';
-import { BrowserRouter, Route, Routes, Navigate,  } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate,  } from 'react-router-dom';
+import Home from './pages/home/home.jsx';
+import UserPage from './pages/user/user.jsx';
+import MoviesPage from './pages/movies/movies';
+import Gender from './pages/gender/gender';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,6 +18,8 @@ function Router() {
       <Route path="/" element={<Navigate replace to="/home" />} />
       <Route element={ <Home /> } path='/home'/>
       <Route element={ <UserPage />} path='/users' />
+      <Route element={ <MoviesPage />} path='/movies' />
+      <Route element={ <Gender />} path='/gender' />
     </Routes>
   </BrowserRouter>
   )
