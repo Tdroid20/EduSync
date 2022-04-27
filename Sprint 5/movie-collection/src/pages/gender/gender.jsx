@@ -49,7 +49,7 @@ function Gender() {
                 <div className="genderList">
                     <li className="listFlexGD">
                         <p className="name">Terror</p>
-                        <div className="random">
+                        <div className="randomGD">
                             <p className="category"></p>
                             <p className="tell"></p>
                         </div>
@@ -61,7 +61,7 @@ function Gender() {
                     </li>
                     <li className="listFlexGD">
                         <p className="name">Ação</p>
-                        <div className="random">
+                        <div className="randomGD">
                             <p className="category"></p>
                             <p className="tell"></p>
                         </div>
@@ -73,7 +73,7 @@ function Gender() {
                     </li>
                     <li className="listFlexGD" id="end">
                         <p className="name">Comédia</p>
-                        <div className="random">
+                        <div className="randomGD">
                             <p className="category"></p>
                             <p className="tell"></p>
                         </div>

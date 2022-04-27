@@ -59,7 +59,7 @@ function MoviesPage() {
                     <div className="moviesList">
                         <li className="listFlexMV">
                             <p className="name">Os outros</p>
-                            <div className="random">
+                            <div className="randomMV">
                                 <p className="category">Terror</p>
                                 <p className="tell"></p>
                             </div>
@@ -71,7 +71,7 @@ function MoviesPage() {
                         </li>
                         <li className="listFlexMV">
                             <p className="name">Até o último homem</p>
-                            <div className="random">
+                            <div className="randomMV">
                                 <p className="category">Ação</p>
                                 <p className="tell"></p>
                             </div>
@@ -83,7 +83,7 @@ function MoviesPage() {
                         </li>
                         <li className="listFlexMV" id="end">
                             <p className="name">O máscara</p>
-                            <div className="random">
+                            <div className="randomMV">
                                 <p className="category">Comédia</p>
                                 <p className="tell"></p>
                             </div>

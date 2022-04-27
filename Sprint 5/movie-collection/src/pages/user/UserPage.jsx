@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getApi } from "../../api/index";
 import logo from '../../assets/logoColored.png'
 import Footer from "../../components/footer";
+import { UserComponents } from "../../components/users";
 import './user.css'
 
 function UserPage() {
+
+    const [user, setUser] = useState([]);
+
+    const ListUsers = () => {
+        getApi.get('Users').then(res => {
+            setUser(res.data)
+        });
+
+    }
+    useEffect(() => {
+        ListUsers()
+    }, [])
+    
     return (
          <div>
           {/* Header */} 
@@ -56,51 +71,13 @@ function UserPage() {
                         <input type="text" placeholder="Digite o Telefone" className="inputTxt" />
                     </div>
                 </div>
-        
-                <div className="contentUser">
-                <div className="userList">
-                    <li className="listFlex">
-                        <p className="name">Paulo Andre</p>
-                        <div className="random">
-                            <p className="email">paulo@email.com</p>
-                            <p className="tell">3349 6788</p>
-                        </div>
-            
-                        <div className="listBtn">
-                            <button className="edit">Editar</button>
-                            <button className="delete">Excluir</button>
-                        </div>
-                    </li>
-                    <li className="listFlex">
-                        <p className="name">Marcos Lucio</p>
-                        <div className="random">
-                            <p className="email">marcos@email.com</p>
-                            <p className="tell">3349 6788</p>
-                        </div>
-            
-                        <div className="listBtn">
-                            <button className="edit">Editar</button>
-                            <button className="delete">Excluir</button>
-                        </div>
-                    </li>
-                    <li className="listFlex" id="end">
-                        <p className="name">Laura Port</p>
-                        <div className="random">
-                            <p className="email">laura@email.com</p>
-                            <p className="tell">3349 6788</p>
-                        </div>
-            
-                        <div className="listBtn">
-                            <button className="edit">Editar</button>
-                            <button className="delete">Excluir</button>
-                        </div>
-                    </li>
-                </div>
-                </div>
+            { user.map(x => <UserComponents obj={x} key={x.id} /> ) }
             </div>
-        
+
+
             {/* Footer */}
             <Footer />
+            <script src="./userSave.js"></script>
          </div>
     )
 }

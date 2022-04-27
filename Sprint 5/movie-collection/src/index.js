@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter, Route, Routes, Navigate,  } from 'react-router-dom';
 import Home from './pages/home/home.jsx';
-import UserPage from './pages/user/user.jsx';
+import UserPage from './pages/user/UserPage.jsx';
 import MoviesPage from './pages/movies/movies';
 import Gender from './pages/gender/gender';
 

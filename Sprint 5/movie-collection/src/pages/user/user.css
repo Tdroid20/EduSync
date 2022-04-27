@@ -183,6 +183,21 @@ nav {
     cursor: pointer;
 }
 
+#btnSave {
+    width: 180px;
+    height: 58px;
+    background: #F6511D;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    border-width: 0;
+    cursor: pointer;
+}
+
 #btn {
     display: flex;
     flex-direction: column;
@@ -190,78 +205,4 @@ nav {
     margin-top: 40px;
 }
 
-.contentUser {
-    display: flex;
-    justify-content: center;
-    width: 1080px;
-}
 
-.userList {
-    width: 100%;
-    margin-top: 90px;
-    flex-direction: column;
-}
-
-.random {
-    display: flex;
-}
-
-.listFlex {
-    display: flex;
-    list-style: none;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    color: #4B2142;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.name {
-    width: 153px;
-}
-
-.category {
-    width: 194px;
-    margin-right: 50px;
-}
-
-.tell {
-    width: 95px;
-}
-
-.edit {
-    width: 125px;
-    height: 35px;
-    background: #F6511D;
-    border: 2px solid #F6511D;
-    box-sizing: border-box;
-    border-radius: 20px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    color: #FFFFFF;
-}
-.delete {
-    width: 125px;
-    height: 35px;
-    background: #41B8D2;
-    border: 2px solid #41B8D2;
-    box-sizing: border-box;
-    border-radius: 20px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    color: #000000;
-    margin-left: 20px;
-}
-
-#end {
-    margin-bottom: 100px;
-}
