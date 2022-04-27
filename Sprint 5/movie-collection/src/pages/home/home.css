@@ -133,8 +133,12 @@ nav {
 }
 
 .text {
-    margin-left: 120px;
+    width: 1200px;
     margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .t1 {
@@ -182,12 +186,12 @@ nav {
 
 
 .cards {
-    width: 95%;
+    width: 1200px;
     height: 270px;
     display: flex;
-    margin-left: 30px;
     margin-top: 50px;
     margin-bottom: 50px;
+    justify-content: center;
 }
 
 .card {

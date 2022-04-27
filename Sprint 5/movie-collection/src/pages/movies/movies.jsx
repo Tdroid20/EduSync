@@ -42,7 +42,7 @@ function MoviesPage() {
             <div className="center">
                 <img src={cine} alt="icone Filmes" id="img" />
             </div>
-            <div className="content">
+            <div className="contentMV">
                 <p className="labelMV">Cadastrar Filmes</p>
                 <div className="inputsMV">
                     <input type="text" placeholder="Titulo do filme" className="inputMV" />
@@ -55,45 +55,47 @@ function MoviesPage() {
                     </select>
                     <button id="saveMV">Salvar</button>
                 </div>
-                <div className="moviesList">
-                    <li className="listFlexMV">
-                        <p className="name">Os outros</p>
-                        <div className="random">
-                            <p className="category">Terror</p>
-                            <p className="tell"></p>
-                        </div>
-            
-                        <div className="listBtnMV">
-                            <button className="edit">Editar</button>
-                            <button className="delete">Excluir</button>
-                        </div>
-                    </li>
-                    <li className="listFlexMV">
-                        <p className="name">Até o último homem</p>
-                        <div className="random">
-                            <p className="category">Ação</p>
-                            <p className="tell"></p>
-                        </div>
-            
-                        <div className="listBtnMV">
-                            <button className="edit">Editar</button>
-                            <button className="delete">Excluir</button>
-                        </div>
-                    </li>
-                    <li className="listFlexMV" id="end">
-                        <p className="name">O máscara</p>
-                        <div className="random">
-                            <p className="category">Comédia</p>
-                            <p className="tell"></p>
-                        </div>
-            
-                        <div className="listBtnMV">
-                            <button className="edit">Editar</button>
-                            <button className="delete">Excluir</button>
-                        </div>
-                    </li>
-                </div>       
-            </div>
+                <div className="contentListMV">
+                    <div className="moviesList">
+                        <li className="listFlexMV">
+                            <p className="name">Os outros</p>
+                            <div className="random">
+                                <p className="category">Terror</p>
+                                <p className="tell"></p>
+                            </div>
+                
+                            <div className="listBtnMV">
+                                <button className="edit">Editar</button>
+                                <button className="delete">Excluir</button>
+                            </div>
+                        </li>
+                        <li className="listFlexMV">
+                            <p className="name">Até o último homem</p>
+                            <div className="random">
+                                <p className="category">Ação</p>
+                                <p className="tell"></p>
+                            </div>
+                
+                            <div className="listBtnMV">
+                                <button className="edit">Editar</button>
+                                <button className="delete">Excluir</button>
+                            </div>
+                        </li>
+                        <li className="listFlexMV" id="end">
+                            <p className="name">O máscara</p>
+                            <div className="random">
+                                <p className="category">Comédia</p>
+                                <p className="tell"></p>
+                            </div>
+                
+                            <div className="listBtnMV">
+                                <button className="edit">Editar</button>
+                                <button className="delete">Excluir</button>
+                            </div>
+                        </li>
+                    </div>       
+                </div>
+                </div>
             </div>
 
         {/* Footer */} 

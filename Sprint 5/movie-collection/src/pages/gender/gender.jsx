@@ -40,13 +40,13 @@ function Gender() {
             <div className="center">
                 <img src={mask} alt="icone Filmes" id="img" />
             </div>
-            <div className="content">
+            <div className="contentGD">
                 <p className="labelGD">Cadastrar Gênero</p>
                 <div className="inputsGD">
                     <input type="text" placeholder="Gênero" className="inputGD" />
                     <button id="saveGD">Salvar</button>
                 </div>
-                <div className="moviesList">
+                <div className="genderList">
                     <li className="listFlexGD">
                         <p className="name">Terror</p>
                         <div className="random">

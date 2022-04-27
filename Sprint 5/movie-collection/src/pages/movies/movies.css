@@ -107,8 +107,11 @@ nav {
 ====================================// Main //===============================
 */
 .main {
+    display: flex;
     width: 100%;
-    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
 }
 
 .center {
@@ -137,16 +140,16 @@ nav {
     margin-top: 20px;
 }
 
-.content {
-    width: 95%;
+.contentMV {
+    width: 1200px;
     display: flex;
     flex-direction: column;
-    margin-left: 60px;
+    justify-content: center;
 }
 
 .inputsMV {
     display: flex;
-    margin-left: 50px;
+    justify-content: space-between;
 }
 
 .inputMV {
@@ -154,7 +157,6 @@ nav {
     height: 58px;
     border: 1px solid #000000;
     box-sizing: border-box;
-    margin-left: 30px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -191,7 +193,6 @@ nav {
 
 .labelMV {
     width: 152px;
-    margin-left: 80px;
     margin-bottom: 20px;
     margin-top: 20px;
     font-family: 'Roboto';
@@ -202,9 +203,16 @@ nav {
     color: #000000;
 }
 
+.contentListMV {
+    display: flex;
+    justify-content: center;
+    width: 1080px;
+}
+
 .moviesList {
-    width: 85%;
+    width: 100%;
     margin-top: 90px;
+    flex-direction: column;
 }
 
 .random {
@@ -222,16 +230,14 @@ nav {
     color: #4B2142;
     justify-content: space-between;
     margin-bottom: 50px;
-    margin-left: 40px;
 }
 
 .name {
-    width: 140px;
+    width: 153px;
 }
 
-.email {
+.category {
     width: 194px;
-    margin-right: 50px;
 }
 
 .tell {
@@ -251,7 +257,6 @@ nav {
     font-size: 20px;
     line-height: 23px;
     color: #FFFFFF;
-    cursor: pointer;
 }
 .delete {
     width: 125px;
@@ -267,7 +272,10 @@ nav {
     line-height: 23px;
     color: #000000;
     margin-left: 20px;
-    cursor: pointer;
+}
+
+#end {
+    margin-bottom: 100px;
 }
 
 
