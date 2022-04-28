@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from '../../assets/logoColored.png';
 import Footer from "../../components/footer";
 import mask from '../../assets/theater 1.png';
 import './gender.css'
+import { GenderComponent } from "../../components/genderComponent";
+import { getApi } from "../../api";
 
 function Gender() {
+
+    const [gender, setGender] = useState([])
+
+    const ListGender = () => {
+        getApi.get('Gender').then(res =>{
+            setGender(res.data)
+        })
+    }
+
+    useEffect(() => {
+        ListGender()
+    }, [])
+
     return (
         <>
         {/* Header */} 
@@ -46,45 +61,10 @@ function Gender() {
                     <input type="text" placeholder="Gênero" className="inputGD" />
                     <button id="saveGD">Salvar</button>
                 </div>
-                <div className="genderList">
-                    <li className="listFlexGD">
-                        <p className="name">Terror</p>
-                        <div className="randomGD">
-                            <p className="category"></p>
-                            <p className="tell"></p>
-                        </div>
-            
-                        <div className="listBtnGD">
-                            <button className="edit">Editar</button>
-                            <button className="delete">Excluir</button>
-                        </div>
-                    </li>
-                    <li className="listFlexGD">
-                        <p className="name">Ação</p>
-                        <div className="randomGD">
-                            <p className="category"></p>
-                            <p className="tell"></p>
-                        </div>
-            
-                        <div className="listBtnGD">
-                            <button className="edit">Editar</button>
-                            <button className="delete">Excluir</button>
-                        </div>
-                    </li>
-                    <li className="listFlexGD" id="end">
-                        <p className="name">Comédia</p>
-                        <div className="randomGD">
-                            <p className="category"></p>
-                            <p className="tell"></p>
-                        </div>
-            
-                        <div className="listBtnGD">
-                            <button className="edit">Editar</button>
-                            <button className="delete">Excluir</button>
-                        </div>
-                    </li>
-                </div>       
-            </div>
+
+                { gender.map(x => <GenderComponent gender={x} key={x.id} />) }
+
+                </div>
             </div>
 
         {/* Footer */} 

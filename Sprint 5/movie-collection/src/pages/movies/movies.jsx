@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from '../../assets/logoColored.png';
 import Footer from "../../components/footer";
 import cine from '../../assets/cinema 1.png';
 import './movies.css';
+import { getApi } from "../../api";
+import { MoviesComponent } from "../../components/moviesComponent";
 
 
 function MoviesPage() {
+
+    const [movies, setMovies] = useState([]);
+
+    const ListMovies = () => {
+        getApi.get('Movies').then(res => {
+            setMovies(res.data)
+        });
+
+    }
+    useEffect(() => {
+        ListMovies()
+    }, [])
+
     return (
         <div>
 
@@ -55,46 +70,9 @@ function MoviesPage() {
                     </select>
                     <button id="saveMV">Salvar</button>
                 </div>
-                <div className="contentListMV">
-                    <div className="moviesList">
-                        <li className="listFlexMV">
-                            <p className="name">Os outros</p>
-                            <div className="randomMV">
-                                <p className="category">Terror</p>
-                                <p className="tell"></p>
-                            </div>
                 
-                            <div className="listBtnMV">
-                                <button className="edit">Editar</button>
-                                <button className="delete">Excluir</button>
-                            </div>
-                        </li>
-                        <li className="listFlexMV">
-                            <p className="name">Até o último homem</p>
-                            <div className="randomMV">
-                                <p className="category">Ação</p>
-                                <p className="tell"></p>
-                            </div>
-                
-                            <div className="listBtnMV">
-                                <button className="edit">Editar</button>
-                                <button className="delete">Excluir</button>
-                            </div>
-                        </li>
-                        <li className="listFlexMV" id="end">
-                            <p className="name">O máscara</p>
-                            <div className="randomMV">
-                                <p className="category">Comédia</p>
-                                <p className="tell"></p>
-                            </div>
-                
-                            <div className="listBtnMV">
-                                <button className="edit">Editar</button>
-                                <button className="delete">Excluir</button>
-                            </div>
-                        </li>
-                    </div>       
-                </div>
+                { movies.map(x => <MoviesComponent obj={x} key={x.id} />) }
+
                 </div>
             </div>
 
