@@ -1,6 +1,6 @@
 import React from "react";
 import './home.css';
-import logo from '../../assets/logoColored.png';
+import logo from '../../assets/HeaderLogo.png'
 import cine from '../../assets/cinema 1.png';
 import mask from '../../assets/theater 1.png';
 import Footer from "../../components/footer";
@@ -13,15 +13,12 @@ function Home() {
             <header>
             <nav>
                 <div id="logo">
-                    <a href="/" className="backToHome">
-                    <div>
-                        <img src={logo} alt="Logo" />
+                    <div className="ConteinerLogo">
+                        <img src={logo} alt="Logo" id="logoPng" />
+                        <div className="webName">
+                            <h2 className="slogan">Conheça nossa Coletânea</h2>
+                        </div>
                     </div>
-                    <div className="webName">
-                        <h1 id="HTitle1">Filmes</h1>
-                        <p id="HTitle2">collections</p>
-                    </div>
-                    </a>
                 </div>
                 <div className="nav">
                     <ul>
@@ -32,7 +29,6 @@ function Home() {
                     </ul>
                 </div>
             </nav>
-                <h2 className="slogan">Conheça nossa Coletânea</h2>
             </header>
 
             {/*  main  */}

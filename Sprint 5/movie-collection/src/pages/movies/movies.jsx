@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from '../../assets/logoColored.png';
+import logo from '../../assets/HeaderLogo.png';
 import Footer from "../../components/footer";
 import cine from '../../assets/cinema 1.png';
 import './movies.css';
@@ -75,15 +75,12 @@ function MoviesPage() {
         <header>
             <nav>
                 <div id="logo">
-                    <a href="/" className="backToHome">
-                    <div>
-                        <img src={logo} alt="Logo" />
+                    <div className="ConteinerLogo">
+                        <img src={logo} alt="Logo" id="logoPng" />
+                        <div className="webName">
+                        <h2 className="slogan">Cadastre os filmes de sua preferência</h2>
+                        </div>
                     </div>
-                    <div className="webName">
-                        <h1 id="HTitle1">Filmes</h1>
-                        <p id="HTitle2">collections</p>
-                    </div>
-                    </a>
                 </div>
                 <div className="nav">
                     <ul>
@@ -94,7 +91,6 @@ function MoviesPage() {
                     </ul>
                 </div>
             </nav>
-            <h2 className="slogan">Cadastre os filmes de sua preferência</h2>
         </header>
 
         {/* main */} 
