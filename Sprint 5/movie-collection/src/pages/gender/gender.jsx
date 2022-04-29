@@ -4,21 +4,34 @@ import Footer from "../../components/footer";
 import mask from '../../assets/theater 1.png';
 import './gender.css'
 import { GenderComponent } from "../../components/genderComponent";
-import { getApi } from "../../api";
+import { endpointApi, getApi } from "../../api";
+import { GenderList } from "../movies/movies";
+import axios from "axios";
 
 function Gender() {
 
     const [gender, setGender] = useState([])
 
-    const ListGender = () => {
-        getApi.get('Gender').then(res =>{
-            setGender(res.data)
-        })
-    }
-
     useEffect(() => {
-        ListGender()
+        new GenderList().list(setGender);
     }, [])
+    
+    const $register = () => {
+        
+        let titleMovie = document.getElementById('titleInput');
+        let genderSelect = document.getElementById('gender');
+        
+        
+        let data = {
+            name: titleMovie.value,
+            gender: genderSelect.value,
+            id: gender.map(x => x).length + 1
+        }
+        
+        console.log(data)
+        axios.post(endpointApi + 'Movies', data) 
+
+    }
 
     return (
         <>
@@ -59,10 +72,10 @@ function Gender() {
                 <p className="labelGD">Cadastrar Gênero</p>
                 <div className="inputsGD">
                     <input type="text" placeholder="Gênero" className="inputGD" />
-                    <button id="saveGD">Salvar</button>
+                    <button id="saveGD" onClick={() => $register()}>Salvar</button>
                 </div>
 
-                { gender.map(x => <GenderComponent gender={x} key={x.id} />) }
+                { gender.map((x, y) => <GenderComponent obj={x} gender={x} sobj={y} setGenderState={setGender} key={x.id} />) }
 
                 </div>
             </div>

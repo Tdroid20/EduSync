@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rosarivo:ital@0;1&display=swap');
+
 .contentListMV {
     display: flex;
     justify-content: center;
@@ -71,4 +73,88 @@
 
 #end {
     margin-bottom: 100px;
+}
+
+
+
+.opacity {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 900;
+}
+
+.modal {
+    width: 1200px;
+    height: 500px;
+    position: fixed;
+    top: 200px;
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(199, 214, 214);
+    border-radius: 25px;
+    margin-bottom: 700px;
+}
+
+.topModal {
+    display: flex;
+    margin-top: 25px;
+}
+
+.titleModal {
+    width: 1100px;
+    display: flex;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 35px;
+    justify-content: center;
+}
+
+.close {
+    font-family: 'Roboto';
+    font-size: 34px;
+    font-weight: 900;
+    color: red;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.contentModalEdit {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputEdit {
+    width: 800px;
+    height: 90px;
+    border: 1px solid rgb(199, 214, 214);
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 23px;
+    color: #4B2142;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    z-index: 10000;
+}
+
+.off {
+    display: none;
+}
+
+.on {
+    display: flex;
 }

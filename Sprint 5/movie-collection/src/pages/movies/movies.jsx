@@ -3,23 +3,51 @@ import logo from '../../assets/logoColored.png';
 import Footer from "../../components/footer";
 import cine from '../../assets/cinema 1.png';
 import './movies.css';
-import { getApi } from "../../api";
+import { endpointApi, getApi } from "../../api";
 import { MoviesComponent } from "../../components/moviesComponent";
+import axios from "axios";
 
+export class Movies {
+    list(setMovies) {
+            getApi.get('Movies').then(res => {
+                setMovies(res.data)
+    });
+  }
+}
+export class GenderList {
+    list(setGender) {
+            getApi.get('Gender').then(res => {
+                setGender(res.data)
+    });
+  }
+}
 
 function MoviesPage() {
 
     const [movies, setMovies] = useState([]);
+    const [gender, setGender] = useState([]);
 
-    const ListMovies = () => {
-        getApi.get('Movies').then(res => {
-            setMovies(res.data)
-        });
+    useEffect(() => {
+        new Movies().list(setMovies);
+        new GenderList().list(setGender);
+    }, [])
+    
+    const $register = () => {
+        
+        let titleMovie = document.getElementById('titleInput');
+        let genderSelect = document.getElementById('gender');
+        
+        
+        let data = {
+            name: titleMovie.value,
+            gender: genderSelect.value,
+            id: movies.map(x => x).length + 1
+        }
+        
+        console.log(data)
+        axios.post(endpointApi + 'Movies', data) 
 
     }
-    useEffect(() => {
-        ListMovies()
-    }, [])
 
     return (
         <div>
@@ -60,18 +88,14 @@ function MoviesPage() {
             <div className="contentMV">
                 <p className="labelMV">Cadastrar Filmes</p>
                 <div className="inputsMV">
-                    <input type="text" placeholder="Titulo do filme" className="inputMV" />
+                    <input type="text" placeholder="Titulo do filme" className="inputMV" id="titleInput"/>
                     <select name="gender" id="gender" className="inputMV">
-                        <option value="none">Gênero</option>
-                        <option value="comedia">Comédia</option>
-                        <option value="terrror">Terror</option>
-                        <option value="suspense">Suspense</option>
-                        <option value="fml">Para Toda Familía</option>
+                        { gender.map(x => <option key={x.id}>{x.name}</option>) }
                     </select>
-                    <button id="saveMV">Salvar</button>
+                    <button id="saveMV" onClick={() => $register()}>Salvar</button>
                 </div>
-                
-                { movies.map(x => <MoviesComponent obj={x} key={x.id} />) }
+            
+                { movies.map((x, y) => <MoviesComponent obj={x} sobj={y} setMoviesState={setMovies} gender={gender} key={x.id} />) }
 
                 </div>
             </div>
