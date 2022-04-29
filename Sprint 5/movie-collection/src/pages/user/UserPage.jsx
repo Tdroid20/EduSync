@@ -1,23 +1,62 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { getApi } from "../../api/index";
+import { endpointApi, getApi } from "../../api/index";
 import logo from '../../assets/logoColored.png'
 import Footer from "../../components/footer";
+import { BlockNullInput } from "../../components/security/BlockNullInput";
 import { UserComponents } from "../../components/users";
+import { UserApi } from "../movies/movies";
 import './user.css'
 
 function UserPage() {
 
     const [user, setUser] = useState([]);
+    const [Mode, setMode] = useState('off');
 
-    const ListUsers = () => {
-        getApi.get('Users').then(res => {
-            setUser(res.data)
-        });
+    const [StatusErro, setStatus] = useState('ok');
+    const [NameUserErro, setNameUserErro] = useState(undefined);
+    const [field, setField] = useState('');
+
+    useEffect(() => {
+        new UserApi().list(setUser);
+    }, [])
+    
+    const $register = () => {
+        
+        let UserName = document.getElementById('Name');
+        let UserEmail = document.getElementById('Email');
+        let UserPhone = document.getElementById('Phone');
+        
+        console.log(UserName.value)
+        
+        let data = {
+            user: UserName.value,
+            email: UserEmail.value,
+            phone: UserPhone.value,
+            id: user.map(x => x).length + 1
+        }
+        
+        if(UserName.value === '') {
+            setStatus('Erro')
+            setField('Nome')
+        } else if(UserEmail.value === '') {
+            setStatus('Erro')
+            setField('Email')
+            setNameUserErro(UserName.value)
+        } else if(UserPhone.value === '') {
+            setStatus('Erro')
+            setField('Telefone')
+            setNameUserErro(UserName.value)
+        }
+
+        axios.post(endpointApi + 'Users', data).then(res => {
+            UserName.value = ''
+            UserEmail.value = ''
+            UserPhone.value = ''
+            new UserApi().list(setUser)
+        })
 
     }
-    useEffect(() => {
-        ListUsers()
-    }, [])
     
     return (
          <div>
@@ -57,23 +96,34 @@ function UserPage() {
                 <div className="inputs">
                     <div className="input">
                         <p className="labelInput">Nome</p>
-                        <input type="text" placeholder="Digite o Nome" className="inputTxt" />
+                        <input type="text" placeholder="Digite o Nome" className="inputTxt" id="Name" />
                         <div id="btn">
-                            <button id="btnSignin">Cadastrar</button>
+                            <button id="btnSignin" onClick={() => $register()}>Cadastrar</button>
                         </div>
                     </div>
                     <div className="input">
                         <p className="labelInput">Email</p>
-                        <input type="text" placeholder="Digite o Email" className="inputTxt" />
+                        <input type="text" placeholder="Digite o Email" className="inputTxt" id="Email"/>
                     </div>
                     <div className="input">
                         <p className="labelInput">Telefone</p>
-                        <input type="text" placeholder="Digite o Telefone" className="inputTxt" />
+                        <input type="text" placeholder="Digite o Telefone" className="inputTxt" id="Phone" />
                     </div>
                 </div>
-            { user.map(x => <UserComponents obj={x} key={x.id} /> ) }
+
+
+            { user.map((x, y) => 
+            <UserComponents 
+            obj={x} 
+            sobj={y} 
+            setUser={setUser}
+            setMode={setMode}
+            Mode={Mode}
+            key={x.id} 
+            /> ) }
             </div>
 
+            <BlockNullInput Status={StatusErro} setStatus={setStatus} field={field} UserName={NameUserErro}/>
 
             {/* Footer */}
             <Footer />

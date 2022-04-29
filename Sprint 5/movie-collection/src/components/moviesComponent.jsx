@@ -117,7 +117,7 @@ export const MoviesComponent = (props) => {
                             <p className="tell"></p>
                         </div>
             
-                        <div className="listBtnGD">
+                        <div className="listBtnMV">
                         <button className={"edit " + props.obj.id} onClick={() => $edit(props.obj.id)}>Editar</button>
                         <button className={"delete " + props.obj.id} onClick={() => $delete(props.obj.id)}>Excluir</button>
                         </div>

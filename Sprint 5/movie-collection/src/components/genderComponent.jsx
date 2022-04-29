@@ -12,8 +12,6 @@ export const GenderComponent = (props) => {
     const $edit = id => {
         if(Mode === 'off') {
             setMode('on')
-        } else if(Mode === 'Change') {
-            setMode('off')
         }
 
     }
@@ -35,51 +33,85 @@ export const GenderComponent = (props) => {
             new GenderList().list(props.setGenderState)
         })
     }
-    let normal = () => {
+    let modelInput = () =>  {
         return (
             <>
-            <div className="contentUser">
-                <div className="genderList">
-                    <li className="listFlexGD">
+            <div className="contentListMV">
+                <div className="moviesList">
+                    <li className="listFlexMV">
                         <p className="name">{props.obj.name}</p>
-                        <div className="randomGD">
+                        <div className="randomMV">
                             <p className="category"></p>
                             <p className="tell"></p>
                         </div>
             
-                        <div className="listBtnGD">
-                            <button className="edit" onClick={() => $edit(props.gender.id)}>Editar</button>
-                            <button className="delete" onClick={() => $delete(props.gender.id)}>Excluir</button>
+                        <div className="listBtnMV">
+                        <button className={"edit " + props.obj.id} onClick={() => $edit(props.obj.id)}>Editar</button>
+                        <button className={"delete " + props.obj.id} onClick={() => $delete(props.obj.id)}>Excluir</button>
                         </div>
                     </li>
-                </div>
-            </div>
-            </>
-        )
-    }
-    
-    let modelInput = () => {
-        return (
-            <>
-            <div className="contentUser">
-                <div className="genderList">
-                    <li className="listFlexGD">
-                        <p className="name">{props.obj.name}</p>
-                        <div className="randomGD">
-                            <p className="category"></p>
-                            <p className="tell"></p>
-                        </div>
-            
-                        <div className="listBtnGD">
-                            <button className="edit" onClick={() => $edit(props.gender.id)}>Editar</button>
-                            <button className="delete" onClick={() => $delete(props.gender.id)}>Excluir</button>
-                        </div>
-                    </li>
-                </div>
+                </div>       
             </div>
 
             <div className={"opacity " + Mode}>
                 <div className={"modal " + Mode}>
+                    <div className="centerModal">
+                    <div className="topModal">
+                    <h1 className="titleModal">Edit Mode</h1>
+                    <p className="close " onClick={() => setMode('off')}>X</p>
+                    </div>
+                    <div className="contentModalEdit">
+
+                        <input 
+                        type="text"
+                        value={Name}
+                        onChange={x => setName(x.target.value)}
+                        id={"editName" + props.obj.id}
+                        className="inputEdit"
+                        />
+
+                        <button id="saveMV" onClick={() => $save(props.obj.id)}>Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </>
+        )
+    }
+    let normal = () => {
+        return (
+            <>
+
+          <div className={"opacity " + Mode} >
+            <div className={"modal " + Mode} >
+                <div className="centerModal">
+                    <div className="topModal">
+                    <h1 className="titleModal">Edit Mode</h1> 
+                    <p className="close " onClick={() => setMode('off')}>X</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+            <div className="contentListMV">
+                <div className="moviesList">
+                    <li className="listFlexMV">
+                        <p className="name">{props.obj.name}</p>
+                        <div className="randomMV">
+                            <p className="category"></p>
+                            <p className="tell"></p>
+                        </div>
+            
+                        <div className="listBtnMV">
+                        <button className={"edit " + props.obj.id} onClick={() => $edit(props.obj.id)}>Editar</button>
+                        <button className={"delete " + props.obj.id} onClick={() => $delete(props.obj.id)}>Excluir</button>
+                        </div>
+                    </li>
+                </div>       
+            </div>
+
+            <div className={"opacity " + Mode} >
+                <div className={"modal " + Mode} >
                     <div className="centerModal">
                         <div className="topModal">
                         <h1 className="titleModal">Edit Mode</h1>

@@ -7,10 +7,15 @@ import { GenderComponent } from "../../components/genderComponent";
 import { endpointApi, getApi } from "../../api";
 import { GenderList } from "../movies/movies";
 import axios from "axios";
+import { BlockNullInput } from "../../components/security/BlockNullInput";
 
 function Gender() {
 
-    const [gender, setGender] = useState([])
+    const [gender, setGender] = useState([]);
+
+    const [StatusErro, setStatus] = useState('ok');
+    const [NameUserErro, setNameUserErro] = useState(undefined);
+    const [field, setField] = useState('');
 
     useEffect(() => {
         new GenderList().list(setGender);
@@ -18,19 +23,21 @@ function Gender() {
     
     const $register = () => {
         
-        let titleMovie = document.getElementById('titleInput');
-        let genderSelect = document.getElementById('gender');
+        let titleGender = document.getElementById('InputGender');
         
+        if(titleGender.value === '') {
+            setStatus('Erro')
+            setField('Gênero')
+        } 
         
         let data = {
-            name: titleMovie.value,
-            gender: genderSelect.value,
+            name: titleGender.value,
             id: gender.map(x => x).length + 1
         }
         
-        console.log(data)
-        axios.post(endpointApi + 'Movies', data) 
-
+        axios.post(endpointApi + 'Gender', data).then(res => {
+            new GenderList().list(setGender)
+        })
     }
 
     return (
@@ -71,10 +78,12 @@ function Gender() {
             <div className="contentGD">
                 <p className="labelGD">Cadastrar Gênero</p>
                 <div className="inputsGD">
-                    <input type="text" placeholder="Gênero" className="inputGD" />
+                    <input type="text" placeholder="Gênero" className="inputGD"  id="InputGender"/>
                     <button id="saveGD" onClick={() => $register()}>Salvar</button>
                 </div>
 
+
+                <BlockNullInput Status={StatusErro} setStatus={setStatus} field={field} UserName={NameUserErro}/>
                 { gender.map((x, y) => <GenderComponent obj={x} gender={x} sobj={y} setGenderState={setGender} key={x.id} />) }
 
                 </div>

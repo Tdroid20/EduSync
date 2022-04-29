@@ -6,6 +6,7 @@ import './movies.css';
 import { endpointApi, getApi } from "../../api";
 import { MoviesComponent } from "../../components/moviesComponent";
 import axios from "axios";
+import { BlockNullInput } from "../../components/security/BlockNullInput";
 
 export class Movies {
     list(setMovies) {
@@ -22,26 +23,44 @@ export class GenderList {
   }
 }
 
+export class UserApi {
+    list(setUser) {
+            getApi.get('Users').then(res => {
+                setUser(res.data)
+    });
+  }
+}
+
 function MoviesPage() {
 
     const [movies, setMovies] = useState([]);
     const [gender, setGender] = useState([]);
+
+    const [StatusErro, setStatus] = useState('ok');
+    const [NameUserErro, setNameUserErro] = useState(undefined);
+    const [field, setField] = useState('');
 
     useEffect(() => {
         new Movies().list(setMovies);
         new GenderList().list(setGender);
     }, [])
     
+    
+
     const $register = () => {
         
         let titleMovie = document.getElementById('titleInput');
         let genderSelect = document.getElementById('gender');
-        
-        
+
         let data = {
             name: titleMovie.value,
             gender: genderSelect.value,
             id: movies.map(x => x).length + 1
+        }
+
+        if(titleMovie.value === '') {
+            setStatus('Erro')
+            setField('Titulo do filme')
         }
         
         console.log(data)
@@ -95,7 +114,10 @@ function MoviesPage() {
                     <button id="saveMV" onClick={() => $register()}>Salvar</button>
                 </div>
             
+                
                 { movies.map((x, y) => <MoviesComponent obj={x} sobj={y} setMoviesState={setMovies} gender={gender} key={x.id} />) }
+
+                <BlockNullInput Status={StatusErro} setStatus={setStatus} field={field} UserName={NameUserErro}/>
 
                 </div>
             </div>

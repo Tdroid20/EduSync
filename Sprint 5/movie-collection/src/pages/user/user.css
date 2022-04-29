@@ -205,4 +205,92 @@ nav {
     margin-top: 40px;
 }
 
+.modalUser {
+    width: 1200px;
+    height: 80%;
+    position: fixed;
+    top: 100px;
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(199, 214, 214);
+    border-radius: 25px;
+    margin-bottom: 700px;
+}
+
+.contentModalEditUser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputEditUser {
+    width: 800px;
+    height: 90px;
+    border: 1px solid rgb(199, 214, 214);
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 23px;
+    color: #4B2142;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    z-index: 10000;
+}
+
+@media (max-width: 1366px) {
+    .modalUser {
+        width: 1200px;
+        height: 70%;
+        position: fixed;
+        top: 100px;
+        z-index: 1000;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgb(199, 214, 214);
+        border-radius: 25px;
+        margin-bottom: 700px;
+    }
+
+    .inputEditUser {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contentModalEditUser {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .inputEditUser {
+        width: 400px;
+        height: 40px;
+        border: 1px solid rgb(199, 214, 214);
+        border-radius: 25px;
+        box-sizing: border-box;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 23px;
+        color: #4B2142;
+        padding-left: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        z-index: 10000;
+    }
+}
 
