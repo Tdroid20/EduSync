@@ -60,7 +60,7 @@ function MoviesPage() {
 
         if(titleMovie.value === '') {
             setStatus('Erro')
-            setField('Titulo do filme')
+            return setField('Titulo do filme')
         }
         
         console.log(data)

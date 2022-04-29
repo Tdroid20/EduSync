@@ -27,7 +27,7 @@ function Gender() {
         
         if(titleGender.value === '') {
             setStatus('Erro')
-            setField('Gênero')
+            return setField('Gênero')
         } 
         
         let data = {

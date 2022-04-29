@@ -38,15 +38,15 @@ function UserPage() {
         
         if(UserName.value === '') {
             setStatus('Erro')
-            setField('Nome')
+            return setField('Nome')
         } else if(UserEmail.value === '') {
             setStatus('Erro')
             setField('Email')
-            setNameUserErro(UserName.value)
+            return setNameUserErro(UserName.value)
         } else if(UserPhone.value === '') {
             setStatus('Erro')
             setField('Telefone')
-            setNameUserErro(UserName.value)
+            return setNameUserErro(UserName.value)
         }
 
         axios.post(endpointApi + 'Users', data).then(res => {
