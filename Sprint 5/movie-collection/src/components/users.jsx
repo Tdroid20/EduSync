@@ -68,12 +68,12 @@ export function UserComponents(props) {
             </div>
         </div>
 
-            <div className={"opacity " + Mode}>
+        <div className={"opacityUser " + Mode}>
                 <div className={"modalUser " + Mode}>
-                    <div className="centerModal">
-                    <div className="topModal">
-                    <h1 className="titleModal">Edit Mode</h1>
-                    <p className="close " onClick={() => setMode('off')}>X</p>
+                    <div className="centerModalUser">
+                    <div className="topModalUser">
+                    <h1 className="titleModalUser">Edit Mode</h1>
+                    <p className="closeUser " onClick={() => setMode('off')}>X</p>
                     </div>
                     <div className="contentModalEditUser">
 
@@ -129,44 +129,7 @@ export function UserComponents(props) {
             </div>
         </div>
 
-            <div className={"opacity " + Mode}>
-                <div className={"modalUser " + Mode}>
-                    <div className="centerModal">
-                    <div className="topModal">
-                    <h1 className="titleModal">Edit Mode</h1>
-                    <p className="close " onClick={() => setMode('off')}>X</p>
-                    </div>
-                    <div className="contentModalEditUser">
-
-                        <input 
-                        type="text"
-                        value={Name}
-                        onChange={x => setName(x.target.value)}
-                        id={"editName" + props.obj.id}
-                        className="inputEditUser"
-                        />
-
-                        <input 
-                        type="text"
-                        value={Email}
-                        onChange={x => setEmail(x.target.value)}
-                        id={"editEmail" + props.obj.id}
-                        className="inputEditUser"
-                        />
-                        
-                        <input 
-                        type="text"
-                        value={Phone}
-                        onChange={x => setPhone(x.target.value)}
-                        id={"editPhone" + props.obj.id}
-                        className="inputEditUser"
-                        />
-
-                        <button id="saveMV" onClick={() => $save(props.obj.id)}>Salvar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+            
         </>
         )
     }
@@ -179,6 +142,7 @@ export function UserComponents(props) {
         qualquer = true
         return modelInput();
     }
+
 }
 
 /*
