@@ -1,47 +1,55 @@
 import React, { useState } from "react";
 import { getApi } from "../api";
-import { GenderList } from "../pages/movies/movies";
-import './css/genderComponent.css'
+import { Movies } from "../pages/movies/movies";
+import './css/moviesComponent.css'
 
-export const GenderComponent = (props) => {
+export const MoviesComponent = (props) => {
 
     const [Mode, setMode] = useState('off')
     const [Name, setName] = useState(props.obj.name);
+    const [Gender, setGender] = useState(props.obj.gender);
 
     
     const $edit = id => {
         if(Mode === 'off') {
             setMode('on')
+        } else if(Mode === 'Change') {
+            setMode('off')
         }
 
     }
 
     const $save = id => {
+
         let UpdateName = document.getElementById('editName' + id).value;
+        let UpdateGender = document.getElementById('editGender' + id).value;
+
         let data = {
             name: UpdateName,
+            gender: UpdateGender
         }
 
-        getApi.put(`Gender/${props.obj.id}`, data).then(res => {
-            new GenderList().list(props.setGenderState);
+        getApi.put(`Movies/${props.obj.id}`, data).then(res => {
+            new Movies().list(props.setMoviesState);
             return setMode('off')
         })
     }
 
     const $delete = () => {
-        getApi.delete(`Gender/${props.obj.id}`).then(res => {
-            new GenderList().list(props.setGenderState)
+        getApi.delete(`Movies/${props.obj.id}`).then(res => {
+            new Movies().list(props.setMoviesState)
         })
     }
+    
     let modelInput = () =>  {
         return (
             <>
-            <div className="contentListGD">
+            <div className="contentListMV">
                 <div className="moviesList">
                     <li className="listFlexMV">
                         <p className="name">{props.obj.name}</p>
                         <div className="randomMV">
-                            <p className="category"></p>
+                            <p className="category">{props.obj.gender}</p>
                             <p className="tell"></p>
                         </div>
             
@@ -69,6 +77,13 @@ export const GenderComponent = (props) => {
                         id={"editName" + props.obj.id}
                         className="inputEdit"
                         />
+
+                        <select 
+                        name="gender"
+                        className="inputEdit"
+                        id={"editGender" + props.obj.id}>
+                        {props.gender.map(x => <option key={x.id}>{x.name}</option>)}
+                        </select>
 
                         <button id="saveMV" onClick={() => $save(props.obj.id)}>Salvar</button>
                     </div>
@@ -98,7 +113,7 @@ export const GenderComponent = (props) => {
                     <li className="listFlexMV">
                         <p className="name">{props.obj.name}</p>
                         <div className="randomMV">
-                            <p className="category"></p>
+                            <p className="category">{props.obj.gender}</p>
                             <p className="tell"></p>
                         </div>
             
@@ -124,6 +139,14 @@ export const GenderComponent = (props) => {
                             value={Name}
                             onChange={x => setName(x.target.value)}
                             id={"editName" + props.obj.id}
+                            className="inputEdit"
+                            />
+
+                            <input 
+                            type="text" 
+                            value={Gender} 
+                            onChange={x => setGender(x.target.value)}
+                            id={"editGender" + props.obj.id}
                             className="inputEdit"
                             />
 

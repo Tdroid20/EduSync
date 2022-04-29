@@ -1,21 +1,21 @@
-.contentListGD {
+.contentUser {
     display: flex;
     justify-content: center;
-    width: 1200px;
-    height: 75px;
+    width: 1080px;
 }
 
-.genderList {
+.userList {
     width: 100%;
     margin-top: 90px;
     flex-direction: column;
 }
 
-.randomGD {
+.random {
     display: flex;
+    width: 495px;
 }
 
-.listFlexGD {
+.listFlex {
     display: flex;
     list-style: none;
     font-family: 'Roboto';
@@ -29,15 +29,15 @@
 }
 
 .name {
-    width: 140px;
+    width: 153px;
 }
 
-.category {
-    width: 194px;
+.email {
+    width: 383px;
 }
 
-.tell {
-    width: 95px;
+.tellUser {
+    width: 148px;
 }
 
 .edit {
@@ -53,7 +53,6 @@
     font-size: 20px;
     line-height: 23px;
     color: #FFFFFF;
-    cursor: pointer;
 }
 .delete {
     width: 125px;
@@ -69,14 +68,13 @@
     line-height: 23px;
     color: #000000;
     margin-left: 20px;
-    cursor: pointer;
 }
 
 #end {
     margin-bottom: 100px;
 }
 
-.opacity {
+.opacityUser {
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -88,7 +86,7 @@
     z-index: 900;
 }
 
-.modal {
+.modalUser {
     width: 1200px;
     height: 500px;
     position: fixed;
@@ -100,12 +98,12 @@
     margin-bottom: 700px;
 }
 
-.topModal {
+.topModalUser {
     display: flex;
     margin-top: 25px;
 }
 
-.titleModal {
+.titleModalUser {
     width: 1100px;
     display: flex;
     font-family: 'Roboto';
@@ -114,7 +112,7 @@
     justify-content: center;
 }
 
-.close {
+.closeUser {
     font-family: 'Roboto';
     font-size: 34px;
     font-weight: 900;
@@ -123,7 +121,7 @@
     margin-left: 30px;
 }
 
-.contentModalEdit {
+.contentModalEditUser {
     width: 100%;
     height: 100%;
     display: flex;
@@ -132,7 +130,7 @@
     align-items: center;
 }
 
-.inputEdit {
+.inputEditUser {
     width: 800px;
     height: 90px;
     border: 1px solid rgb(199, 214, 214);
@@ -148,12 +146,4 @@
     margin-bottom: 30px;
     text-align: center;
     z-index: 10000;
-}
-
-.off {
-    display: none;
-}
-
-.on {
-    display: flex;
 }

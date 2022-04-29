@@ -1,8 +1,7 @@
-.contentListGD {
+.contentUser {
     display: flex;
     justify-content: center;
     width: 1200px;
-    height: 75px;
 }
 
 .genderList {

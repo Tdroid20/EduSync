@@ -156,6 +156,7 @@ nav {
     width: 400px;
     height: 58px;
     border: 1px solid #000000;
+    border-radius: 5px;
     box-sizing: border-box;
     font-family: 'Roboto';
     font-style: normal;

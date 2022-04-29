@@ -140,25 +140,22 @@ nav {
     margin-top: 20px;
 }
 
-.contentGD {
+.contentMV {
     width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-
-.inputsGD {
+.inputsMV {
     display: flex;
-    width: 1200px;
     justify-content: space-between;
 }
 
-.inputGD {
+.inputMV {
     width: 400px;
     height: 58px;
     border: 1px solid #000000;
-    border-radius: 5px;
     box-sizing: border-box;
     font-family: 'Roboto';
     font-style: normal;
@@ -169,11 +166,12 @@ nav {
     padding-left: 30px;
 }
 
-#saveGD {
+#saveMV {
     width: 180px;
     height: 58px;
     background: #F6511D;
     border-width: 0;
+    margin-left: 30px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -183,7 +181,18 @@ nav {
     cursor: pointer;
 }
 
-.labelGD {
+#gender {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(../../assets/Polygon\ 1.png);
+    background-repeat: no-repeat, repeat;
+    background-position: right 1.2em top 50%, 0 0;
+    background-size: 0.8em auto, 100%;
+}
+
+.labelMV {
+    width: 152px;
     margin-bottom: 20px;
     margin-top: 20px;
     font-family: 'Roboto';
@@ -192,6 +201,81 @@ nav {
     font-size: 20px;
     line-height: 23px;
     color: #000000;
+}
+
+.contentListMV {
+    display: flex;
+    justify-content: center;
+    width: 1080px;
+}
+
+.moviesList {
+    width: 100%;
+    margin-top: 90px;
+    flex-direction: column;
+}
+
+.randomMV {
+    display: flex;
+}
+
+.listFlexMV {
+    display: flex;
+    list-style: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #4B2142;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.name {
+    width: 153px;
+}
+
+.category {
+    width: 194px;
+}
+
+.tell {
+    width: 95px;
+}
+
+.edit {
+    width: 125px;
+    height: 35px;
+    background: #F6511D;
+    border: 2px solid #F6511D;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.delete {
+    width: 125px;
+    height: 35px;
+    background: #41B8D2;
+    border: 2px solid #41B8D2;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    margin-left: 20px;
+}
+
+#end {
+    margin-bottom: 100px;
 }
 
 

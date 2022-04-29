@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../movies/movies.css">
+    <title>Template MV</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div id="logo">
+                <div>
+                    <img src="../../assets/logoColored.png" alt="Logo">
+                </div>
+                <div class="webName">
+                    <h1 id="HTitle1">Filmes</h1>
+                    <p id="HTitle2">collections</p>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="navList"><a href="/" class="navText">Home</a></li>
+                    <li class="navList"><a href="/users" class="navText">Usuario</a></li>
+                    <li class="navList"><a href="/movies" class="navText">Filmes</a></li>
+                    <li class="navList" ><a href="/" class="navText">Gênero</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h2 class="slogan">Cadastre os filmes de sua preferência</h2>
+    </header>
+
+    <!-- main -->
+    
+    <div class="main">
+        <p class="title">Filmes</p>
+        <div class="center">
+            <img src="../../assets/cinema 1.png" alt="icone Filmes" id="img" />
+        </div>
+        <div class="content">
+            <p class="label">Cadastrar Filmes</p>
+            <div class="inputs">
+                <input type="text" placeholder="Titulo do filme" class="inputMV">
+                <select name="gender" id="gender" class="inputMV">
+                    <option value="none">Gênero</option>
+                    <option value="comedia">Comédia</option>
+                    <option value="terrror">Terror</option>
+                    <option value="suspense">Suspense</option>
+                    <option value="fml">Para Toda Familía</option>
+                </select>
+                <button id="save">Salvar</button>
+            </div>
+            <div class="moviesList">
+                <li class="listFlexMV">
+                    <p class="name">Os outros</p>
+                    <div class="random">
+                        <p class="category">paulo@email.com</p>
+                        <p class="tell"></p>
+                    </div>
+        
+                    <div class="listBtnMV">
+                        <button class="edit">Editar</button>
+                        <button class="delete">Excluir</button>
+                    </div>
+                </li>
+                <li class="listFlexMV">
+                    <p class="name">Marcos Lucio</p>
+                    <div class="random">
+                        <p class="category">marcos@email.com</p>
+                        <p class="tell"></p>
+                    </div>
+        
+                    <div class="listBtnMV">
+                        <button class="edit">Editar</button>
+                        <button class="delete">Excluir</button>
+                    </div>
+                </li>
+                <li class="listFlexMV" id="end">
+                    <p class="name">Laura Port</p>
+                    <div class="random">
+                        <p class="category">laura@email.com</p>
+                        <p class="tell"></p>
+                    </div>
+        
+                    <div class="listBtnMV">
+                        <button class="edit">Editar</button>
+                        <button class="delete">Excluir</button>
+                    </div>
+                </li>
+            </div>       
+        </div>
+        </div>
+
+    <!-- Footer -->
+    <footer class="rodape">
+        <img src="../../assets/Footer logo.png" alt="Logo Movies collections" class="fundo">
+        <div class="linha"></div>
+        <div class="pFooter">
+            <br>
+            <p id="p1" class="SoloRoboto"> Company Inc, 8901 Marmora Road, Glasspow, DO4 89GR</p>
+            <br>
+            <p id="p2" class="SoloRoboto"> Call us now toll free: (800)2345-6789</p>
+            <br>
+            <p id="p3" class="SoloRoboto"> Costumer support suporrt@demolink.org</p>
+            <br>
+            <p id="p4" class="SoloRoboto"> Skype: Sample-username</p>
+            <br>
+        </div>
+    </footer>
+</body>
+</html>

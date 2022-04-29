@@ -1,21 +1,22 @@
-.contentListGD {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rosarivo:ital@0;1&display=swap');
+
+.contentListMV {
     display: flex;
     justify-content: center;
     width: 1200px;
-    height: 75px;
 }
 
-.genderList {
+.moviesList {
     width: 100%;
     margin-top: 90px;
     flex-direction: column;
 }
 
-.randomGD {
+.randomMV {
     display: flex;
 }
 
-.listFlexGD {
+.listFlexMV {
     display: flex;
     list-style: none;
     font-family: 'Roboto';
@@ -29,7 +30,7 @@
 }
 
 .name {
-    width: 140px;
+    width: 153px;
 }
 
 .category {
@@ -53,7 +54,6 @@
     font-size: 20px;
     line-height: 23px;
     color: #FFFFFF;
-    cursor: pointer;
 }
 .delete {
     width: 125px;
@@ -69,12 +69,13 @@
     line-height: 23px;
     color: #000000;
     margin-left: 20px;
-    cursor: pointer;
 }
 
 #end {
     margin-bottom: 100px;
 }
+
+
 
 .opacity {
     display: flex;

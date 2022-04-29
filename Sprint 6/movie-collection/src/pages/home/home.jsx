@@ -26,7 +26,7 @@ function Home() {
                 <div className="nav">
                     <ul>
                         <li className="navList"><a href="/" className="navText">Home</a></li>
-                        <li className="navList"><a href="/users" className="navText">Usuários</a></li>
+                        <li className="navList"><a href="/users" className="navText">Usuario</a></li>
                         <li className="navList"><a href="/movies" className="navText">Filmes</a></li>
                         <li className="navList" ><a href="/gender" className="navText">Gênero</a></li>
                     </ul>

@@ -36,7 +36,7 @@ export const GenderComponent = (props) => {
     let modelInput = () =>  {
         return (
             <>
-            <div className="contentListGD">
+            <div className="contentListMV">
                 <div className="moviesList">
                     <li className="listFlexMV">
                         <p className="name">{props.obj.name}</p>
