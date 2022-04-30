@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from '../../assets/logoColored.png';
+import logo from '../../assets/HeaderLogo.png';
 import Footer from "../../components/footer";
 import cine from '../../assets/cinema 1.png';
 import './movies.css';
@@ -75,26 +75,22 @@ function MoviesPage() {
         <header>
             <nav>
                 <div id="logo">
-                    <a href="/" className="backToHome">
-                    <div>
-                        <img src={logo} alt="Logo" />
+                    <div className="ConteinerLogo">
+                        <img src={logo} alt="Logo" id="logoPng" />
+                        <div className="webName">
+                        <h2 className="slogan">Cadastre os filmes de sua preferência</h2>
+                        </div>
                     </div>
-                    <div className="webName">
-                        <h1 id="HTitle1">Filmes</h1>
-                        <p id="HTitle2">collections</p>
-                    </div>
-                    </a>
                 </div>
                 <div className="nav">
                     <ul>
                         <li className="navList"><a href="/" className="navText">Home</a></li>
-                        <li className="navList"><a href="/users" className="navText">Usuario</a></li>
+                        <li className="navList"><a href="/users" className="navText">Usuários</a></li>
                         <li className="navList"><a href="/movies" className="navText">Filmes</a></li>
                         <li className="navList" ><a href="/gender" className="navText">Gênero</a></li>
                     </ul>
                 </div>
             </nav>
-            <h2 className="slogan">Cadastre os filmes de sua preferência</h2>
         </header>
 
         {/* main */} 
@@ -109,6 +105,7 @@ function MoviesPage() {
                 <div className="inputsMV">
                     <input type="text" placeholder="Titulo do filme" className="inputMV" id="titleInput"/>
                     <select name="gender" id="gender" className="inputMV">
+                        <option value={null} selected>Gênero</option>
                         { gender.map(x => <option key={x.id}>{x.name}</option>) }
                     </select>
                     <button id="saveMV" onClick={() => $register()}>Salvar</button>

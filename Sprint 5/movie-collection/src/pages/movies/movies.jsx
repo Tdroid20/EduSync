@@ -7,6 +7,7 @@ import { endpointApi, getApi } from "../../api";
 import { MoviesComponent } from "../../components/moviesComponent";
 import axios from "axios";
 import { BlockNullInput } from "../../components/security/BlockNullInput";
+import { LoadingComponent } from "../../components/Loading";
 
 export class Movies {
     list(setMovies) {
@@ -19,7 +20,7 @@ export class GenderList {
     list(setGender) {
             getApi.get('Gender').then(res => {
                 setGender(res.data)
-    });
+            });
   }
 }
 
@@ -40,9 +41,19 @@ function MoviesPage() {
     const [NameUserErro, setNameUserErro] = useState(undefined);
     const [field, setField] = useState('');
 
+    const [Loading, setLoading] = useState(true);
+
     useEffect(() => {
-        new Movies().list(setMovies);
-        new GenderList().list(setGender);
+        setTimeout(() => {
+            getApi.get('Movies').then(res => {
+                setMovies(res.data)
+            }).then(() => {
+                getApi.get('Gender').then(res => {
+                    setGender(res.data)
+                    setLoading(false)
+                });
+            });
+        }, 3000)
     }, [])
     
     
@@ -112,6 +123,8 @@ function MoviesPage() {
                 </div>
             
                 
+                { Loading && <LoadingComponent /> }
+
                 { movies.map((x, y) => <MoviesComponent obj={x} sobj={y} setMoviesState={setMovies} gender={gender} key={x.id} />) }
 
                 <BlockNullInput Status={StatusErro} setStatus={setStatus} field={field} UserName={NameUserErro}/>

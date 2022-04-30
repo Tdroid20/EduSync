@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { getApi } from "../api";
 import '../components/css/userComponet.css';
 import { UserApi } from "../pages/movies/movies";
@@ -144,22 +144,3 @@ export function UserComponents(props) {
     }
 
 }
-
-/*
-<div className="contentUser">
-            <div className="userList">
-                <li className="listFlex">
-                    <p className="name">{props.obj.user}</p>
-                    <div className="random">
-                        <p className="email">{props.obj.email}</p>
-                        <p className="tellUser">{props.obj.phone}</p>
-                    </div>
-        
-                    <div className="listBtn">
-                        <button className={"edit "+ Mode} id="editBtn" onClick={() => $edit(props.obj.id) }>Editar</button>
-                        <button className="delete" onClick={() => $delete(props.obj.id)}>Excluir</button>
-                    </div>
-                </li>
-            </div>
-        </div>
-*/

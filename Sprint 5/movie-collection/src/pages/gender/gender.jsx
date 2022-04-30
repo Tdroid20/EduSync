@@ -8,6 +8,7 @@ import { endpointApi, getApi } from "../../api";
 import { GenderList } from "../movies/movies";
 import axios from "axios";
 import { BlockNullInput } from "../../components/security/BlockNullInput";
+import { LoadingComponent } from "../../components/Loading";
 
 function Gender() {
 
@@ -16,9 +17,16 @@ function Gender() {
     const [StatusErro, setStatus] = useState('ok');
     const [NameUserErro, setNameUserErro] = useState(undefined);
     const [field, setField] = useState('');
+    const [Loading, setLoading] = useState(true);
+
 
     useEffect(() => {
-        new GenderList().list(setGender);
+        setTimeout(() => {
+            getApi.get('Gender').then(res => {
+                setGender(res.data)
+                setLoading(false)
+            });
+        }, 3000)
     }, [])
     
     const $register = () => {
@@ -78,6 +86,7 @@ function Gender() {
                     <button id="saveGD" onClick={() => $register()}>Salvar</button>
                 </div>
 
+                { Loading && <LoadingComponent /> }
 
                 <BlockNullInput Status={StatusErro} setStatus={setStatus} field={field} UserName={NameUserErro}/>
                 { gender.map((x, y) => <GenderComponent obj={x} gender={x} sobj={y} setGenderState={setGender} key={x.id} />) }

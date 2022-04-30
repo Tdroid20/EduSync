@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { endpointApi, getApi } from "../../api/index";
 import logo from '../../assets/HeaderLogo.png';
 import Footer from "../../components/footer";
+import { LoadingComponent } from "../../components/Loading";
 import { BlockNullInput } from "../../components/security/BlockNullInput";
 import { UserComponents } from "../../components/users";
 import { UserApi } from "../movies/movies";
@@ -16,9 +17,15 @@ function UserPage() {
     const [StatusErro, setStatus] = useState('ok');
     const [NameUserErro, setNameUserErro] = useState(undefined);
     const [field, setField] = useState('');
+    const [Loading, setLoading] = useState(true);
 
     useEffect(() => {
-        new UserApi().list(setUser);
+        setTimeout(() => {
+            getApi.get('Users').then(res => {
+                setUser(res.data)
+                setLoading(false)
+            });
+        }, 3000)
     }, [])
     
     const $register = () => {
@@ -107,6 +114,8 @@ function UserPage() {
                     </div>
                 </div>
 
+
+            { Loading && <LoadingComponent />}
 
             { user.map((x, y) => 
             <UserComponents 
