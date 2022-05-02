@@ -93,16 +93,16 @@ export const GenderComponent = (props) => {
             </div>
           </div>
 
-            <div className="contentListMV">
+            <div className="contentListGD">
                 <div className="moviesList">
-                    <li className="listFlexMV">
+                    <li className="listFlexGD">
                         <p className="name">{props.obj.name}</p>
                         <div className="randomMV">
                             <p className="category"></p>
                             <p className="tell"></p>
                         </div>
             
-                        <div className="listBtnMV">
+                        <div className="listBtnGD">
                         <button className={"edit " + props.obj.id} onClick={() => $edit(props.obj.id)}>Editar</button>
                         <button className={"delete " + props.obj.id} onClick={() => $delete(props.obj.id)}>Excluir</button>
                         </div>
