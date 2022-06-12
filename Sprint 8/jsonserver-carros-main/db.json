@@ -1,0 +1,91 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "Paulo",
+      "email": "paulo@email.com",
+      "foto": "avatar.png"
+    },
+    {
+      "id": 2,
+      "nome": "Priscila",
+      "email": "priscila@email.com",
+      "foto": "avatar.png"
+    },
+    {
+      "id": 3,
+      "nome": "Tdroid",
+      "email": "garotorocha90@gmail.com",
+      "foto": "avatar.jpeg"
+    }
+  ],
+  "admins": [
+    {
+      "email": "tdroid@brq.com"
+    }
+  ],
+  "locadoras": [
+    {
+      "nome": "Dois Irmãos",
+      "endereco": "Rua bah, 286",
+      "telefone": "245-658-522",
+      "id": 1
+    },
+    {
+      "nome": "Tres Irmãos",
+      "endereco": "Av. Brasil, 162",
+      "telefone": "21-99589-8459",
+      "id": 2
+    },
+    {
+      "nome": "Skyrus motors",
+      "endereco": "Rua das Loucuras, 310",
+      "telefone": "618-625-8313",
+      "id": 3
+    }
+  ],
+  "carros": [
+    {
+      "id": 1,
+      "nome": "Ford Fusion",
+      "portas": 4,
+      "npessoas": 5,
+      "airbag": true,
+      "locadoraId": 1
+    },
+    {
+      "id": 2,
+      "nome": "Ford Focus",
+      "portas": 4,
+      "npessoas": 5,
+      "airbag": true,
+      "locadoraId": 1
+    }
+  ],
+  "reservas": [
+    {
+      "id": 1,
+      "data": "2022-05-21",
+      "horario": "15:00",
+      "dataentrega": "2022-05-25",
+      "usuarioId": 2,
+      "carroId": 1
+    },
+    {
+      "id": 2,
+      "data": "2022-05-21",
+      "horario": "15:00",
+      "dataentrega": "2022-05-25",
+      "usuarioId": 2,
+      "carroId": 1
+    },
+    {
+      "id": 3,
+      "data": "2022-05-21",
+      "horario": "15:00",
+      "dataentrega": "2022-05-25",
+      "usuarioId": 2,
+      "carroId": 1
+    }
+  ]
+}

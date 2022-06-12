@@ -36,7 +36,7 @@ export const GenderComponent = (props) => {
     let modelInput = () =>  {
         return (
             <>
-            <div className="contentListGD">
+            <div className="contentListMV">
                 <div className="moviesList">
                     <li className="listFlexMV">
                         <p className="name">{props.obj.name}</p>
@@ -93,16 +93,16 @@ export const GenderComponent = (props) => {
             </div>
           </div>
 
-            <div className="contentListGD">
+            <div className="contentListMV">
                 <div className="moviesList">
-                    <li className="listFlexGD">
+                    <li className="listFlexMV">
                         <p className="name">{props.obj.name}</p>
                         <div className="randomMV">
                             <p className="category"></p>
                             <p className="tell"></p>
                         </div>
             
-                        <div className="listBtnGD">
+                        <div className="listBtnMV">
                         <button className={"edit " + props.obj.id} onClick={() => $edit(props.obj.id)}>Editar</button>
                         <button className={"delete " + props.obj.id} onClick={() => $delete(props.obj.id)}>Excluir</button>
                         </div>

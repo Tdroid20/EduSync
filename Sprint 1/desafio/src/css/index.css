@@ -143,13 +143,34 @@ footer {
     background-color: #660027;
     color: #FFFFFF;
     width: 100%;
-    margin-top: 40px;
-    padding: 20px;
+    height: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
 }
+
+/* =========== Scroll Bar  ===========  */
+* ::-webkit-scrollbar {
+    width: 12px;
+}
+
+* ::-webkit-scrollbar-thumb {
+    background-color: #660027;
+    border-radius: 20px;   
+    border: 2px solid #660027;
+}
+
+* ::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+* ::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+
 
 /* =========== Media query  ===========  */
 

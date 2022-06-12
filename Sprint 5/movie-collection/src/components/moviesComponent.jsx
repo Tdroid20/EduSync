@@ -142,13 +142,12 @@ export const MoviesComponent = (props) => {
                             className="inputEdit"
                             />
 
-                            <input 
-                            type="text" 
-                            value={Gender} 
-                            onChange={x => setGender(x.target.value)}
-                            id={"editGender" + props.obj.id}
-                            className="inputEdit"
-                            />
+                            <select 
+                                name="gender"
+                                className="inputEdit"
+                                id={"editGender" + props.obj.id}>
+                                {props.gender.map(x => <option key={x.id}>{x.name}</option>)}
+                            </select>
 
                             <button id="saveMV" onClick={() => $save(props.obj.id)}>Salvar</button>
                         </div>

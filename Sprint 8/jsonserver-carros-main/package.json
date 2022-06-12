@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.0"
+  },
+
+  "scripts": {
+    "start": "json-server --watch db.json -p 3004"
+  }
+}

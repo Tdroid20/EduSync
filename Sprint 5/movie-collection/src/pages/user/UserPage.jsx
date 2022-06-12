@@ -25,7 +25,7 @@ function UserPage() {
                 setUser(res.data)
                 setLoading(false)
             });
-        }, 3000)
+        }, 1000)
     }, [])
     
     const $register = () => {
