@@ -30,15 +30,21 @@ const consult = () => {
     });
 };
 consult();
-let resgisterBTN = `<button id="siginup" class="siginup" onclick="$register()">Cadastrar</button>`
-let rquestUpBTN = `<button id="save" class="siginup" onclick="$save()" value="false">Salvar</button>`
+
+let resgisterBTN = `<button id="siginup" class="siginup" onclick="$injectionValidate()">Cadastrar</button>`
+let rquestUpBTN = `<button id="save" class="siginup" onclick="$save()" value="false">Salvar</button>`;
+
 const packagesLoad = (aditive?: any) => {
+
     const div: any = document.getElementById('packagesList');
     let divInsert: any = ``;
+
     for (let i = 0; i < pack.length; i++) {
+
         const meses = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
         let data = new Date(pack[i].data);
         let dataFormatada = (+(data.getDate() + 1) + '/' + meses[(data.getMonth())] + '/' + data.getFullYear());
+
         divInsert += `<div class="card" id="${pack[i].id}">
         <p class="packageTitle">${pack[i].nome}</p>
         <p class="packageDesc">${pack[i].descricao}</p>
@@ -49,35 +55,57 @@ const packagesLoad = (aditive?: any) => {
             <button class="packageBtn delete" onclick="$delete(${i})">Excluir</button>
         </div>
         </div>`;
+
         div.innerHTML = divInsert;
+
         const btn: any = document.getElementById('btFlex');
+
         btn.innerHTML = resgisterBTN
         aditive
     }
 };
 
+let DescriptionFild: any = document.getElementById('description');
+
+const $injectionValidate = () => {
+    let HTMLInspect: RegExp = /<[a-zA-Z]*>[a-z- A-Z 0-9]*<\/[a-z>]*/g;
+    let HTMLInspectResponse: RegExpMatchArray | null = DescriptionFild.value.match(HTMLInspect);
+    
+    if (!!HTMLInspectResponse) {
+       return alert('O senhor não pode inserir codigos HTML aqui!');
+    } else { 
+        return $register();
+    }
+}
+
 
 const $register = () => {
+
     const inputName: any = document.getElementById('name');
     const inputDate: any = document.getElementById('date');
     const inputDesc: any = document.getElementById('description');
     const inputRadio: any = document.querySelector('input[name="bah"]:checked');
+
     let _name = inputName.value;
     let _date = inputDate.value;
     let _desc = inputDesc.value;
     let _status = inputRadio.value;
+
     const meses = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
     let data = new Date(_date);
     let dataFormatada = (data.getFullYear() + '-' + (data.getMonth() + 1) + '-' + (data.getDate() + 1));
     let dataAtual = new Date();
+
     let dataAtualFormatada = (dataAtual.getFullYear() + '-' + (dataAtual.getMonth() + 1) + '-' + (dataAtual.getDate()));
+
+
     if (_name === '')
         return alert('O nome do pacote não foi informado');
     if (_date === '') {
-        alert('A data de viagem não foi informada');
+        return alert('A data de viagem não foi informada');
     }
     if (_desc === '') {
-        alert('A descrição não foi informada');
+        return alert('A descrição não foi informada');
     }
     if (dataFormatada < dataAtualFormatada)
         return alert(`Você informou uma data passada.`);
@@ -88,40 +116,49 @@ const $register = () => {
         status: _status,
         id: pack.length + 1
     };
+
     console.log(newPackage);
     pack.push(newPackage);
     packagesLoad();
+
     // zerando inputs
     let resName: any = document.getElementById('name');
     let resDate: any = document.getElementById('date');
     let resdesc: any = document.getElementById('description');
     let resStatus: any = document.getElementById('inactive');
+
     resName.value = '';
     resDate.value = '';
     resdesc.value = '';
     resStatus.checked = true;
     window.location.href = `http://localhost:3000/src/pages/home.html#${pack.length}`;
 };
+
 const $delete = (indice: any) => {
+
     pack.splice(indice, 1);
+
     if(!pack[0]) {
         let divRepair: any = document.getElementById('packagesList');
         let F: any = divRepair.innerHTML = ``
         packagesLoad(F);
     } else {
-        packagesLoad()
+        packagesLoad();
     }
 };
 
-let documentEdit: any = []
-let editMode = false
+let documentEdit: any = [];
+let editMode = false;
+
 let $save = () => {
-    editMode = false
-    console.log(editMode)
-    $editMode(documentEdit)
+
+    editMode = false;
+    console.log(editMode);
+    $editMode(documentEdit);
 }
 const $editMode = (edit: any) => {
-    console.log(editMode)
+
+    console.log(editMode);
     const inputName: any = document.getElementById('name');
     const inputDate: any = document.getElementById('date');
     const inputDesc: any = document.getElementById('description');
@@ -134,11 +171,11 @@ const $editMode = (edit: any) => {
 
     edit.nome = _name;
     edit.data = _date;
-    edit.descricao = _desc
+    edit.descricao = _desc;
     if(_status == "false") {
-        edit.status = false
+        edit.status = false;
     } else if(_status == "true") {
-        edit.status = true
+        edit.status = true;
     }
 
     if(editMode == true) {
@@ -202,7 +239,7 @@ const $edit = (id: any) => {
     window.location.href = `http://localhost:3000/src/pages/home.html#editLink`;
     
     editMode = true;
-    documentEdit = edit
-    console.log(editMode)
-    $editMode(edit)
+    documentEdit = edit;
+    console.log(editMode);
+    $editMode(edit);
 }

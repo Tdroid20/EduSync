@@ -1,4 +1,5 @@
 "use strict";
+
 /*
 ===============================// Rebuild //================================
 */
@@ -21,7 +22,7 @@ const consult = () => {
     });
 };
 consult();
-let resgisterBTN = `<button id="siginup" class="siginup" onclick="$register()">Cadastrar</button>`;
+let resgisterBTN = `<button id="siginup" class="siginup" onclick="$injectionValidate()">Cadastrar</button>`;
 let rquestUpBTN = `<button id="save" class="siginup" onclick="$save()" value="false">Salvar</button>`;
 const packagesLoad = (aditive) => {
     const div = document.getElementById('packagesList');
@@ -46,6 +47,17 @@ const packagesLoad = (aditive) => {
         aditive;
     }
 };
+let DescriptionFild = document.getElementById('description');
+const $injectionValidate = () => {
+    let HTMLInspect = /<[a-zA-Z]*>[a-z- A-Z 0-9]*<\/[a-z>]*/g;
+    let HTMLInspectResponse = DescriptionFild.value.match(HTMLInspect);
+    if (!!HTMLInspectResponse) {
+        return alert('O senhor não pode inserir codigos HTML aqui!');
+    }
+    else {
+        return $register();
+    }
+};
 const $register = () => {
     const inputName = document.getElementById('name');
     const inputDate = document.getElementById('date');
@@ -63,10 +75,10 @@ const $register = () => {
     if (_name === '')
         return alert('O nome do pacote não foi informado');
     if (_date === '') {
-        alert('A data de viagem não foi informada');
+        return alert('A data de viagem não foi informada');
     }
     if (_desc === '') {
-        alert('A descrição não foi informada');
+        return alert('A descrição não foi informada');
     }
     if (dataFormatada < dataAtualFormatada)
         return alert(`Você informou uma data passada.`);
